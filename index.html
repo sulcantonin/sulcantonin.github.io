@@ -323,5 +323,52 @@
 
 <a href="https://clustrmaps.com/site/1bgzy" title="Visit tracker"><img wdith=1 src="//www.clustrmaps.com/map_v2.png?d=R0C0ra5x-6DUhu6FO7_zSVoVdWS9RLyr-CL-kni6WIU&cl=ffffff"></a>
 
+
+<script>
+  // Create a container for the cursor traces
+const traceContainer = document.createElement('div');
+traceContainer.style.position = 'fixed';
+traceContainer.style.pointerEvents = 'none';
+traceContainer.style.zIndex = '9999';
+document.body.appendChild(traceContainer);
+
+// Function to create a trace element
+function createTraceElement(x, y) {
+  const trace = document.createElement('div');
+  trace.style.position = 'absolute';
+  trace.style.width = '5px';
+  trace.style.height = '5px';
+  trace.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
+  trace.style.borderRadius = '50%';
+  trace.style.left = `${x}px`;
+  trace.style.top = `${y}px`;
+  return trace;
+}
+
+// Array to store trace elements
+const traces = [];
+
+// Function to update cursor position and add new trace
+function updateCursorTrace(e) {
+  const trace = createTraceElement(e.clientX, e.clientY);
+  traceContainer.appendChild(trace);
+  traces.push(trace);
+  
+  // Remove old traces if there are too many
+  if (traces.length > 20) {
+    const oldTrace = traces.shift();
+    traceContainer.removeChild(oldTrace);
+  }
+  
+  // Fade out traces
+  traces.forEach((t, index) => {
+    t.style.opacity = 1 - (index / traces.length);
+  });
+}
+
+// Add event listener for mouse movement
+document.addEventListener('mousemove', updateCursorTrace);
+</script>
+
 </body>
 </html>
