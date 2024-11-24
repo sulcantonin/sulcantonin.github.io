@@ -1,327 +1,327 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Dr. Antonin Sulc - Computer Vision, Machine Learning</title>
-	<link rel="icon" type="image/png" href="favicon.png" />
-	<style type="text/css">
-	body {
-		width:90%;
-		padding: 60px;
-		margin: 0px;
-		font-family: 'courier new';
-		font-size: 20px;
-		box-sizing:border-box;
-		background-color: #e5ccaf;
-		color: #555;
-		-webkit-font-smoothing:antialiased;
-	}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonin Sulc - Machine Learning & Computer Vision Engineer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+        }
 
-	a {
-		display: inline;
-		position: relative;
-		color: black;
-		text-decoration: none;
-	}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
 
-	a:after {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: 3px;
-		width: 0%;
-		left: 0px;
-		height: 1px;
-		transition:0.35s ease;
-		background: black;
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-	}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-	a:hover:after {
-		width: 100%;
-	}
+        /* Header Styles */
+        header {
+            background-color: var(--card-bg);
+            padding: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-	@media screen and (max-width: 700px) {
-	  body {
-	  	padding: 30px;
-	  	font-size: 16px;
-	  }
-	}
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
 
-	</style>
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #e5e7eb;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Publications Grid */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .publication-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .publication-card .tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag {
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--card-bg);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
-<p>
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Research</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<center>
-    <img src="IMG_5028.JPEG" align="middle"/></center>
-	</br></br>
-	Easy, I am Antonin Sulc, got a PhD in Computer Vision at Uni Konstanz. 
-	I am starting at <a href="https://www.lbl.gov/">Lawrence Berkeley National Laboratory</a> soon. 
-	My latest CV <a href="https://github.com/sulcantonin/sulcantonin.github.io/blob/master/CV.pdf">[pdf]</a>.
-<br><br>
-<h2>Publications</h2>
-<ul>
-	<li> 🇺🇸
-		<i><b>A. Sulc</b>, T. Hellert, R. Kammering, H. Houscher, J. St. John</i>
-		<b>Towards Agentic AI on Particle Accelerators </b> at Machine Learning and the Physical Sciences Workshop at NeuralIPS
-		<a href="https://arxiv.org/abs/2409.06336">[arxiv]</a> 
-	</li>
-	<li>🇨🇿
-		<i><b>A. Sulc</b>, P. Connor</i>
-		<b>ChatQCD: Let Large Language Models Explore QCD </b>, 42nd International Conference on High Energy Physics ⚡
-		<a href="https://indico.cern.ch/event/1291157/contributions/5902233/attachments/2896991/5080392/CHATQCD_ICHEP24.pdf">[poster]</a>
-		<a href="https://github.com/sulcantonin/CHATQCD_ICHEP24">[github]</a>
-		<a href="https://github.com/sulcantonin/CHATQCD_ICHEP24/blob/main/ChatQCD_POS.pdf">[paper]</a>
-	</li>
-	<li>🇨🇿
-		<i>P. Connor, <b>A. Sulc</b></i>
-		<b> Revealing Connections in QCD with Machine Learning </b>, 42nd International Conference on High Energy Physics ⚡
-		<a href="https://indico.cern.ch/event/1291157/contributions/5902232/attachments/2896993/5079604/poster.pdf">[poster]</a>
-		<a href="ICHEP2024_1054.pdf">[paper]</a>
-	</li>
-	<li> 🇺🇸
-		<i><b>A. Sulc</b>, A. Eichler, T. Wilksen </i>
-		<b>Unsupervised Log Anomaly Detection with Few Unique Tokens</b> 
-		<i>under review</i>
-		<a href="https://arxiv.org/abs/2310.08951">[arxiv]</a>
-		<a href="https://github.com/sulcantonin/LOG_ICALEPCS23/blob/main/TH2AO01_TALK.pdf">[slides]</a>
-  		<a href="https://github.com/sulcantonin/LOG_ICALEPCS23">[git]</a>
-	</li>
-	<li> 🇺🇸
-		<i><b>A. Sulc</b>, A. Eichler, T. Wilksen</i> 
-		<b>Automated Anomaly Detection on European XFEL Klystrons </b>
-		at International Conference in Particle Accelerators 2024, Nashville, USA 
-		<a href="https://www.jacow.org/ipac2024/pdf/THPR36.pdf">[pdf]</a>
-		<a href="THPR36_poster.pdf">[poster]</a>
-		<a href="https://arxiv.org/abs/2405.12391">[arxiv]</a>
-		<a href="https://github.com/sulcantonin/KLY_IPAC24">[git]</a>
-		
-	</li>
-	<li> 🇺🇸
-		<i><b>A. Sulc</b>, A. Eichler, G. Hartmann, T. Wilksen, J. St. John, F. Mayet, J. Maldonado, D. Ratner, J. Kaiser, V. Kain, T. Hellert, H. Hoschouer</i> 
-		<b>Towards Unlocking Insights from Logbooks Using AI </b>
-		at International Conference in Particle Accelerators 2024, Nashville, USA 
-		<a href="https://www.jacow.org/ipac2024/pdf/THPR37.pdf">[pdf]</a>
-		<a href="THPR37_poster.pdf">[poster]</a>
-		<a href="https://arxiv.org/abs/2406.12881">[arxiv]</a>
-		<a href="https://github.com/sulcantonin/PA_LOGBOOKS">[git]</a>		
-	</li>
-	
-	<li>  🇺🇸
-		<i><b>A. Sulc</b>, R. Kammering, A. Eichler, T. Wilksen</i>
-		<b>PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators</b>
-		at NeuralIPS 2023 Machine Learning for Physical Sciences Workshop, New Orleans, U.S.A.
-		<a href="https://arxiv.org/abs/2310.19106">[arxiv]</a>
-		<a href="https://github.com/sulcantonin/LLM_NeuralIPS23">[git]</a>
-		<a href="PACuna.pdf">[poster]</a>
-	</li>
-	<li> 🇿🇦
-		<i><b>A. Sulc</b>, A. Eichler, T. Wilksen </i>
-		<b>Log Anomaly Detection on EuXFEL Nodes</b> 
-		at The 19th Biennial International Conference on Accelerator and Large Experimental Physics Control Systems, Cape Town, South Africa 
-		<span style="color:red;">(oral, 30% acceptance rate)</span> 
-		<a href="https://github.com/sulcantonin/LOG_ICALEPCS23/blob/main/TH2AO01.pdf">[pdf]</a>
-		<a href="https://arxiv.org/abs/2310.08951">[arxiv]</a>
-		<!---[![arXiv](https://img.shields.io/badge/arXiv-2310.08951-b31b1b.svg)](https://arxiv.org/abs/2310.08951)--->
-		<a href="https://github.com/sulcantonin/LOG_ICALEPCS23/blob/main/TH2AO01_TALK.pdf">[slides]</a>
-  		<a href="https://github.com/sulcantonin/LOG_ICALEPCS23">[git]</a>
-	</li>
-	<li> 🇿🇦
-		<i> <b>A. Sulc</b>, A. Eichler, T. Wilksen </i>
-		<b>Textual Analysis of ICALEPCS and IPAC Conference Proceedings: Revealing Research Trends, Topics, and Collaborations for Future Insights and Advanced Search</b> 
-		at The 19th Biennial International Conference on Accelerator and Large Experimental Physics Control Systems, Cape Town, South Africa 
-		<span style="color:red;">(oral, 30% acceptance rate)</span>
-		<a href="https://github.com/sulcantonin/TEXT_ICALEPCS23/blob/main/TU2AO02.pdf">[pdf]</a>
-		<a href="https://arxiv.org/abs/2310.08954">[arxiv]</a>
-		<!---[![arXiv](https://img.shields.io/badge/arXiv-2310.08954-b31b1b.svg)](https://arxiv.org/abs/2310.08954)--->
-		<a href="https://github.com/sulcantonin/TEXT_ICALEPCS23/blob/main/TU2AO02_TALK.pdf">[slides]</a>
-  		<a href="https://github.com/sulcantonin/TEXT_ICALEPCS23">[git]</a>
-	</li>
-	<li> 🇿🇦
-		<i>V. Rybnikov, <b>A. Sulc</b></i>
-		<b>A Data Acquisition Middle Layer Server With Python Support For Linac Operation And Experiments Monitoring And Control</b>
-		at The 19th Biennial International Conference on Accelerator and Large Experimental Physics Control Systems, Cape Town, South Africa 
-	</li>
-	
-    	<li> 🇹🇭
-		<i> <b>A. Sulc</b>, R. Kammering, T. Wilksen </i>
-		<b>A Data-Driven Beam Trajectory Monitoring at the European XFEL </b> 
-		at International Conference in Particle Accelerators 2022, Bangkok, Thailand 
-		<a href="https://accelconf.web.cern.ch/ipac2022/papers/mopopt069.pdf">[pdf]</a>
-  		<a href="https://github.com/sulcantonin/BPM_IPAC22">[git]</a>
-	</li>
-	
-	<li> 🇺🇸
-		<i><b>A. Sulc</b>, A. Eichler, T. Wilksen </i>
-		<b>A Data-Driven Anomaly Detection on SRF Cavities at the European XFEL</b> 
-		Journal of Physics: Conference Series, Volume 2420, 
-		<a href="https://iopscience.iop.org/article/10.1088/1742-6596/2420/1/012070/pdf">[pdf]</a>
-		<a href="https://doi.org/10.1088/1742-6596/2420/1/012070">[doi]</a>
-	</li>
-	
-	<li> 🇺🇸
-		<i><b>A. Sulc</b> , O. Johannsen, B. Goldluecke </i>
-		<b> Recovery of Geometry, Natural Illumination and BRDF from a Single Light Field Image </b> 
-		at Journal of the Optical Society of America A (imapct factor 2.129)
-		<a href="https://www.osapublishing.org/josaa/abstract.cfm?doi=10.1364/JOSAA.433491">[doi]</a>
-	    	<a href="https://github.com/sulcantonin/IR-JOSAA"/>[git]</a>
-		<a href="https://github.com/sulcantonin/IR-JOSAA/blob/main/paper-preprint.pdf">[pdf] (preprint)</a>
-	</li>
-    	<li> 🇬🇧
-	    <i><b>A. Sulc</b>, I. Sato, B. Goldluecke, T. Treibitz</i>
-	    <b>Towards Monocular Shape from Refraction</b> at British Machine Vision Conference 2021, Virtual, United Kingdom 🇬🇧
-	    <span style="color:red;">❗ accepted as oral (3.3% acceptance) ❗</span>
-	    <a href="https://github.com/sulcantonin/SfR-BMVC21"/>[git]</a>
-	    <a href="https://arxiv.org/abs/2305.19743">[arxiv]</a>
-	    <a href="https://www.bmvc2021-virtualconference.com/assets/papers/0195.pdf"/>[pdf]</a>
-	    <a href="https://github.com/sulcantonin/SfR-BMVC21/blob/main/bibtex"/>[bib]</a>
+    <header>
+        <div class="container">
+            <div class="hero">
+                <img src="IMG_5028.JPEG" alt="Antonin Sulc" class="profile-img">
+                <div class="hero-content">
+                    <h1>Antonin Sulc, Ph.D.</h1>
+                    <p>Machine Learning Engineer & Computer Vision Specialist | Lawrence Berkeley National Laboratory</p>
+                    <p>Bridging the gap between cutting-edge research and practical AI applications</p>
+                    <div class="skills">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">AI for Physics</span>
+                        <span class="skill-tag">Natural Language Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <li> 🇹🇼 
-        <i>S. Ishihara, <b>A. Sulc</b>, I. Sato.</i> 
-        <b>Depth from Spectral Defocus Blur</b> at IEEE International Conference on Image Processing 2019, Taipei, Taiwan 
-        <a href="https://drive.google.com/file/d/1sFubNHwSulVNryqA2riKuexX1CtVSS9B/view?usp=sharing">[pdf]</a>
-    </li>
+    <main class="container">
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <p>I specialize in developing AI solutions for complex scientific problems, particularly in physics and particle accelerators. With a Ph.D. in Computer Vision from Uni Konstanz and extensive experience in machine learning, I bridge the gap between academic research and practical applications.</p>
+            <p>Currently working at Lawrence Berkeley National Laboratory, I focus on developing innovative AI solutions for particle accelerator control and optimization.</p>
+        </section>
 
-    <li> 🇺🇸
-	<i>Ishihara, Shin, <b>Antonin Sulc</b>, Imari Sato.</i> 
-	<b>Depth estimation using spectrally varying defocus blur.</b> 
-	at Journal of the Optical Society of America A 
-	    <span style="color:red;">❗ (imapct factor 2.129) ❗</span>
-    </li>
-	
-    <li> 🇺🇸
-        <i>  M. Zhu, A. Alperovich, O. Johannsen, <b>A. Sulc</b>, B. Goldluecke </i> 
-        <b>An Epipolar Volume Autoencoder with Adversarial Loss for Deep Light Field Super-Resolution </b> at Computer Vision and Pattern Recognition Conference 2019, Salt Lake City, U.S.A 🇺🇸
-        <a href="http://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Zhu_An_Epipolar_Volume_Autoencoder_With_Adversarial_Loss_for_Deep_Light_CVPRW_2019_paper.pdf">[pdf]</a>
-        <a href="https://drive.google.com/file/d/15D4Trvsjayvl2CpKPa9WXR1flWpW4guB/view?usp=sharing">[poster]</a>
-    </li>
-    
-    
-    <li> 🇮🇹
-        <i><b>A. Sulc</b>, O. Johannsen, B. Goldluecke.</i> 
-	<b>Inverse Lightfield Rendering for Shape, Reflection and Natural Illumination</b>
-        <a href="https://drive.google.com/file/d/1n8x2jA6fPPRl--Pv9cajiflH5AUwlMEG/view?usp=sharing">[pdf - corrected]</a>
-	<a href="https://drive.google.com/file/d/1Dr_Ihi-aFPzes-THW3hLmLeJiAhsGE-r/view?usp=sharing">[pdf - old]</a>
-	<a href="https://youtu.be/ZVKPy6uXjUA">[video1]</a>
-	<a href="https://youtu.be/9oVaZeTNGnk">[video2]</a>
-	<a href="https://youtu.be/tMlbvuT25nM">[video3]</a>
-	<a href="https://youtu.be/yB5Up_uF0_4">[video4]</a>
-	<a href="https://drive.google.com/file/d/1_HC30hGazsJFIWTX72hYuND-HwZHYPgr/view?usp=sharing">[video-lytro] </a>
-    </li>
-    
-    <li> 🇮🇹
-	    <i>O. Johannsen, K. Honauer, B. Goldluecke, A. Alperovich, F. Battisti, Y. Bok, M. Brizzi, M. Carli, G. Choe, M. Diebold, M. Gutsche, H. Jeon, I. Kweon, J. Park, J. Park, H. Schilling, H. Sheng, L. Si, M. Strecke, <b>A. Sulc</b>, Y. Tai, Q. Wang, T. Wang, S. Wanner, Z. Xiong, J. Yu, S. Zhang, H. Zhu</i> <b>A Taxonomy and Evaluation of Dense Light Field Depth Estimation Algorithms</b>
-        	<a href="http://openaccess.thecvf.com/content_cvpr_2017_workshops/w27/papers/Johannsen_A_Taxonomy_and_CVPR_2017_paper.pdf">[pdf]</a>
-    </li>
-    
-    <li> 🇹🇼
-	    <i>O. Johannsen, <b>A. Sulc</b>, N. Marniok, B. Goldluecke</i> <b>Layered scene reconstruction from multiple light field camera views </b>
-        <a href="http://publications.lightfield-analysis.net/JSMG16_accv.pdf">[pdf]</a>
-        <a href="http://publications.lightfield-analysis.net/JSMG16_accv_poster.pdf">[poster]</a>
-        <a href="http://lightfield-analysis.net/accv2016_data_synthetic.zip">[syntetic]</a>
-        <a href="http://lightfield-analysis.net/accv2016_data_lytro.zip">[lytro, Lambertian]</a>
-	<a href="https://drive.google.com/file/d/14bLlcFxLiY1oh_QQUK3vCa9TWWTf6gv2/view?usp=sharing">[lytro, semi-transparent - TBD]</a>
-        <a href="https://github.com/sulcantonin/lf_budle_adjustment">[code]</a>
-	<a href="https://drive.google.com/file/d/11jiriWn_F43_kw-knRC3Cu-rjAhl7baU/view?usp=sharing" target="_blank">[jpg]</a>
-        
-    </li>
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>PACuna: AI for Particle Accelerators</h3>
+                    <p>Automated fine-tuning of language models for particle accelerator control and optimization. Achieved significant improvements in accelerator efficiency and stability.</p>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Physics</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>ChatQCD: AI Exploration of QCD</h3>
+                    <p>Innovative application of large language models to explore Quantum Chromodynamics, bridging AI and fundamental physics research.</p>
+                    <div class="tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Physics</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Log Anomaly Detection</h3>
+                    <p>Developed an unsupervised learning system for detecting anomalies in particle accelerator logs, improving maintenance efficiency.</p>
+                    <div class="tags">
+                        <span class="tag">Anomaly Detection</span>
+                        <span class="tag">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <li> 🇩🇪
-	    <i><b>A. Sulc</b>, A. Alperovich, N. Marniok, B. Goldluecke</i> <b>Reflection Separation in Light Fields based on Sparse Coding and Specular Flow </b>
-        <a href="http://publications.lightfield-analysis.net/SAMG16_vmv.pdf">[pdf]</a>
-        <a href="http://publications.lightfield-analysis.net/SAMG16_vmv_slides.pdf">[talk]</a>
-        
-    </li> 🇩🇪
-    <li><i>O. Johannsen, <b>A. Sulc</b>, B. Goldluecke</i>, <b>Occlusion-aware depth estimation using sparse light field coding</b> 
-        <a href="http://publications.lightfield-analysis.net/JSG16_gcpr.pdf">[pdf]</a> 
-        <a href="http://publications.lightfield-analysis.net/JSG16_gcpr_slides.pdf">[slides]</a>
-        </li>
-    <li> 🇺🇸
-	    <i>O. Johannsen, <b>A. Sulc</b>, B. Goldluecke</i>, <b>What Sparse Light Field Coding Reveals About Scene Structure</b> 
-        <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Johannsen_What_Sparse_Light_CVPR_2016_paper.pdf">[pdf]</a>
-        <a href="http://publications.lightfield-analysis.net/JSG16_cvpr_poster.pdf">[poster]</a></li>
-    
-    <li> 🇩🇪
-	    <i>O. Johannsen, <b>A. Sulc</b>, B. Goldluecke</i>, <b>Variational Separation of Light Field Layers</b> 
-        <a href="http://publications.lightfield-analysis.net/JSG15_vmv.pdf">[pdf]</a> 
-    </li>
-    
-    <li> 🇨🇱
-	    <i>O. Johannsen, <b>A. Sulc</b>, B. Goldluecke</i>, <b>On Linear Structure from Motion for Light Field Cameras</b> 
-	    <a href="http://publications.lightfield-analysis.net/JSG15_iccv.pdf">[pdf]</a> 
-	    <a href="http://publications.lightfield-analysis.net/JSG15_iccv_poster.pdf">[poster]</a>
-	    <a href="https://github.com/sulcantonin/lf_budle_adjustment">[code]</a>
-	    <a href="DSC01251.jpg" target="_blank">[jpg]</a> 
-	</li> 
-</ul>
+        <section id="publications" class="section">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="tags">
+                        <span class="tag">2024</span>
+                        <span class="tag">NeuralIPS</span>
+                    </div>
+                    <h3>Towards Agentic AI on Particle Accelerators</h3>
+                    <p>Novel approach to implementing autonomous AI agents for particle accelerator control and optimization.</p>
+                </div>
+                <div class="publication-card">
+                    <div class="tags">
+                        <span class="tag">2024</span>
+                        <span class="tag">ICHEP</span>
+                    </div>
+                    <h3>ChatQCD: Let Large Language Models Explore QCD</h3>
+                    <p>Innovative application of LLMs to explore and understand Quantum Chromodynamics.</p>
+                </div>
+            </div>
+        </section>
 
-<br/>
-<br/>
-<h2>Talks</h2>
-<ul>	
-	<li>🇩🇪 Language Processing for Matter and Technology <i><a href="https://indico.desy.de/event/45079/contributions/175761/>10th Annual MT Meeting</a> <a href="MT2024_LLM4Matter_and_Technology.pptx">[pptx]</a></i></li>
-	<li>🇩🇪 Exploring the Strong Coupling Through Natural Language Processing at <i><a href=https://indico.desy.de/event/38849/overview">1st Large Language Models in Physics Symposium (LIPS)</a></i></li> <a href="https://indico.desy.de/event/38849/contributions/162119/">[slides]</a>
-	<li>🇩🇪 Illuminating the Dark: Discovering in Dark Matter Research through Natural Language Processing at <i><a href="https://indico.desy.de/event/38849/overview">1st Large Language Models in Physics Symposium (LIPS)</a></i></li> <a href="https://indico.desy.de/event/38849/contributions/162119/">[slides]</a>
-	<li>🇰🇷 Towards Unlocking Insights from Logbooks using AI at DESY and BESSY at <a href="https://www.indico.kr/event/47/">4th ICFA Beam Dynamics Mini-Workshop on Machine Learning for Particle Accelerators </a>  </li>
-	<li>🇨🇭 Unlocking Insights from Logbooks using AI at DESY and BESSY at <a href="https://indico.cern.ch/event/1326603/">9th Low Emittance Rings Workshop 2024</a> <a href="TBD">[slides]</a></li>
-	<li>🇩🇪 DESY 6th Round Table<a href="DESY_RoundTable2023.pdf">[slides]</a> </li>
-	<li>🇩🇪 Machine Learning at MCS/MSK <a href="ALPS_Workshop.pdf">[slides]</a> </li>
-	<li>🇺🇸 Tutorial on Anomaly Detection at ICFA Beam Dynamics Workshop in Chicago, IL <a href=https://github.com/sulcantonin/ICFA-Beam-2022>[git]</a> 
-	<li>🇩🇪 <i> Current Development of Automated Accelerator Controls at DESY</i> 8th Matter and Technologies Annual Meeting at DESY
-		<a href="https://indico.desy.de/event/33132/contributions/129847/">[pdf]</i>
-	<li>🇩🇪 <i>Machine Learning for Anomaly Detection</i> at MLE-Summer School at TUHH
-		<a href="https://github.com/sulcantonin/MLE2022">[git]</a>
-		<a href="https://github.com/sulcantonin/MLE2022/blob/main/MLE_Summer_School.pdf">[pdf]</a> 
-	</li> 
-	<li>🇩🇪 <i>Data-Driven Diagnosis at European XFEL</i> at CDCS Opening Symposium (DESY.DE) 
-		<a href="https://indico.desy.de/event/31214/contributions/115055/attachments/74443/95329/20220427_CD4_Sulc.pdf">[pdf]</a> 
-	</li>
-    <li>🇮🇱<i>PixelClub Technion</i> 
-    	<a href="https://drive.google.com/file/d/1B3iN-eoSArcIISk9okEGwBxzqv27lKzR/view?usp=sharing">[pdf]</a>	
-	<a href="https://drive.google.com/drive/folders/1p3PQgtg9wNvUKZGn1rtq77Zw9AGcdtlR?usp=sharing">[videos]</a> 
-    </li>
-    <li> 🇩🇪 <i>Multiobject Tracking Repetitive Patterns with Autoencoder</i> <a href="https://github.com/sulcantonin/collective_psychology_tracker">[code]</a> <a href="https://github.com/sulcantonin/collective_psychology_tracker/blob/master/materials/pdf/ASAB___CBP.pdf">[slides]</a> <a href="http://sulc.one/data/example_bottle.zip">[zip - example - bottle]</a> 🇩🇪</li>
-    <li> 🇩🇪 <i>Summer School in Quantitative Field Biology</i> 
-    		<a href="https://drive.google.com/file/d/1cnjRzpMHF2DnLW9NUHsN9hoTdzSnrg8n/view?usp=sharing">[code]</a> 
-		<a href="https://drive.google.com/file/d/1m8lQeKeCIksW9HznxDY2rLlUQvEQeSM2/view?usp=sharing">[slides]</a> </li>
-    <li> 🇨🇿 <i>The 11th Intelligent Machine Perception Seminar </i> <a href="http://impact.ciirc.cvut.cz/?page_id=68">[html]</a></li>
-    <li> 🇨🇿 <i>The 38th Pattern Recognition and Computer Vision Colloquium</i> <a href="http://cmp.felk.cvut.cz/cmp/events/colloquium-2016.03.31/">[html]</a> </li>
-    <li> 🇨🇿 <i>State-of-The-Art Computational Design and Fabrication</i><a href="https://drive.google.com/file/d/1LbdpHjh-2Kp5T81P5gvYCIy-RoCsQcNU/view?usp=sharing">[pdf]</a> </li>
-    
-</ul>
-
-<h2>Theses</h2>
-<ul>
-    <li>🇩🇪 doctoral thesis <i>Light Field Analysis for Non-Lambertian Scenes</i> <a href="https://kops.uni-konstanz.de/handle/123456789/52493">[pdf]</a> </li>
-    <li>🇨🇿 master thesis <i>On Parametric Model Creation with Neural Modeling Fields </i> <a href="https://drive.google.com/file/d/1pSLTTAHVOeoiusuMMld3Mzji32f_jiOY/view?usp=sharing">[pdf]</a> </li>
-    <li>🇨🇿 bachelor thesis, <i> Implementation of CMA-ES Evolutionary Algorithm</i>   
-    		<a href="https://github.com/dhonza/JCOOL">[code]</a> 
-		<a href="https://drive.google.com/file/d/1Ic7ZzAw_gOHAYzc1d6OLv31aglpxaKtn/view?usp=sharing">[pdf]</a> 
-    </li>
-</ul>
-
-<h2>Projects</h2>
-<ul>
-	
-	<li>
-		<i>Multiobject Tracking Repetitive Patterns with Autoencoder</i> 
-		<a href="https://github.com/sulcantonin/collective_psychology_tracker">[git]</a>
-	</li>
-	<li> 
-		<i>Implementation of CMA-ES for JCool <a href="https://github.com/dhonza/JCOOL">[git]</a></i>
-	</li>
-	<li>
-		<i>multiagent simulation for optimization <a href="https://github.com/sulcantonin/social_optimizaiton">[git]</a>
-	</li>
-</ul>						    
-
-<center>
-    <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ&hl=en&oi=ao"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" width="35" height="35"></a>
-    <a href="https://orcid.org/0000-0001-7767-778X"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="35" height="35"></a>
-    <a href="https://github.com/sulcantonin"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width=35 height=35></a>
-    <a href="https://www.linkedin.com/in/antonin-sulc-0aa1101ba/"><img src="https://www.leuthaeuser-partner.de/wp-content/uploads/2017/09/LinkedIn-Logo-500x500.png" width=35 height=35></a>
-</center>
-
-<a href="https://clustrmaps.com/site/1bgzy" title="Visit tracker"><img wdith=1 src="//www.clustrmaps.com/map_v2.png?d=R0C0ra5x-6DUhu6FO7_zSVoVdWS9RLyr-CL-kni6WIU&cl=ffffff"></a>
+        <section id="contact" class="section">
+            <h2 class="section-title">Connect With Me</h2>
+            <p>I'm always interested in collaborating on innovative projects and research opportunities.</p>
+            <div class="contact-links">
+                <a href="https://github.com/sulcantonin" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/antonin-sulc-0aa1101ba/" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ" class="contact-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    Google Scholar
+                </a>
+                <a href="https://orcid.org/0000-0001-7767-778X" class="contact-link">
+                    <i class="fas fa-id-card"></i>
+                    ORCID
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
