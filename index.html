@@ -278,27 +278,124 @@
             </div>
         </section>
 
-        <section id="publications" class="section">
-            <h2 class="section-title">Selected Publications</h2>
-            <div class="publications-grid">
-                <div class="publication-card">
-                    <div class="tags">
-                        <span class="tag">2024</span>
-                        <span class="tag">NeuralIPS</span>
-                    </div>
-                    <h3>Towards Agentic AI on Particle Accelerators</h3>
-                    <p>Novel approach to implementing autonomous AI agents for particle accelerator control and optimization.</p>
-                </div>
-                <div class="publication-card">
-                    <div class="tags">
-                        <span class="tag">2024</span>
-                        <span class="tag">ICHEP</span>
-                    </div>
-                    <h3>ChatQCD: Let Large Language Models Explore QCD</h3>
-                    <p>Innovative application of LLMs to explore and understand Quantum Chromodynamics.</p>
-                </div>
-            </div>
-        </section>
+	<section id="publications" class="section">
+	    <h2 class="section-title">Selected Publications</h2>
+	    <div class="filter-buttons" style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+		<button class="tag" style="cursor: pointer; border: none;">All</button>
+		<button class="tag" style="cursor: pointer; border: none;">Machine Learning</button>
+		<button class="tag" style="cursor: pointer; border: none;">Physics</button>
+		<button class="tag" style="cursor: pointer; border: none;">Computer Vision</button>
+	    </div>
+	    <div class="publications-grid">
+		<!-- AI for Physics Papers -->
+		<div class="publication-card">
+		    <div class="tags">
+		        <span class="tag">2024</span>
+		        <span class="tag">NeuralIPS</span>
+		        <span class="tag">Featured</span>
+		    </div>
+		    <h3>Towards Agentic AI on Particle Accelerators</h3>
+		    <p>Novel approach to implementing autonomous AI agents for particle accelerator control and optimization.</p>
+		    <div class="paper-links" style="margin-top: 1rem;">
+		        <a href="https://arxiv.org/abs/2409.06336" class="contact-link">
+		            <i class="fas fa-file-pdf"></i> PDF
+		        </a>
+		    </div>
+		</div>
+
+		<div class="publication-card">
+		    <div class="tags">
+		        <span class="tag">2023</span>
+		        <span class="tag">NeuralIPS</span>
+		    </div>
+		    <h3>PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators</h3>
+		    <p>Developed innovative techniques for adapting large language models to specialized particle accelerator domains, improving control system efficiency.</p>
+		    <div class="paper-links" style="margin-top: 1rem;">
+		        <a href="https://arxiv.org/abs/2310.19106" class="contact-link">
+		            <i class="fas fa-file-pdf"></i> PDF
+		        </a>
+		        <a href="https://github.com/sulcantonin/LLM_NeuralIPS23" class="contact-link">
+		            <i class="fab fa-github"></i> Code
+		        </a>
+		    </div>
+		</div>
+
+		<div class="publication-card">
+		    <div class="tags">
+		        <span class="tag">2024</span>
+		        <span class="tag">ICHEP</span>
+		    </div>
+		    <h3>ChatQCD: Let Large Language Models Explore QCD</h3>
+		    <p>Innovative application of LLMs to explore and understand Quantum Chromodynamics, demonstrating AI's potential in theoretical physics.</p>
+		    <div class="paper-links" style="margin-top: 1rem;">
+		        <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24" class="contact-link">
+		            <i class="fab fa-github"></i> Code
+		        </a>
+		    </div>
+		</div>
+
+		<!-- Anomaly Detection Papers -->
+		<div class="publication-card">
+		    <div class="tags">
+		        <span class="tag">2023</span>
+		        <span class="tag">Journal of Physics</span>
+		    </div>
+		    <h3>A Data-Driven Anomaly Detection on SRF Cavities at the European XFEL</h3>
+		    <p>Developed machine learning approaches for detecting anomalies in superconducting radio-frequency cavities, improving accelerator reliability and maintenance efficiency.</p>
+		    <div class="paper-links" style="margin-top: 1rem;">
+		        <a href="https://doi.org/10.1088/1742-6596/2420/1/012070" class="contact-link">
+		            <i class="fas fa-file-pdf"></i> PDF
+		        </a>
+		        <a href="#" class="contact-link">
+		            <i class="fas fa-link"></i> DOI
+		        </a>
+		    </div>
+		</div>
+
+		<!-- Computer Vision Papers -->
+		<div class="publication-card">
+		    <div class="tags">
+		        <span class="tag">2021</span>
+		        <span class="tag">BMVC</span>
+		        <span class="tag">Oral Presentation</span>
+		    </div>
+		    <h3>Towards Monocular Shape from Refraction</h3>
+		    <p>Novel computer vision approach for reconstructing 3D shapes from refractive effects, with applications in underwater imaging and transparent object reconstruction. Accepted as oral presentation (3.3% acceptance rate).</p>
+		    <div class="paper-links" style="margin-top: 1rem;">
+		        <a href="https://arxiv.org/abs/2305.19743" class="contact-link">
+		            <i class="fas fa-file-pdf"></i> PDF
+		        </a>
+		        <a href="https://github.com/sulcantonin/SfR-BMVC21" class="contact-link">
+		            <i class="fab fa-github"></i> Code
+		        </a>
+		    </div>
+		</div>
+
+		<div class="publication-card">
+		    <div class="tags">
+		        <span class="tag">2022</span>
+		        <span class="tag">JOSA A</span>
+		        <span class="tag">Journal</span>
+		    </div>
+		    <h3>Recovery of Geometry, Natural Illumination and BRDF from a Single Light Field Image</h3>
+		    <p>Comprehensive approach to recovering scene properties from light field imagery, published in the Journal of the Optical Society of America A (impact factor 2.129).</p>
+		    <div class="paper-links" style="margin-top: 1rem;">
+		        <a href="https://www.osapublishing.org/josaa/abstract.cfm?doi=10.1364/JOSAA.433491" class="contact-link">
+		            <i class="fas fa-file-pdf"></i> PDF
+		        </a>
+		    </div>
+		</div>
+	    </div>
+	    
+	    <!-- View More Button -->
+	    <div style="text-align: center; margin-top: 2rem;">
+		<a href="#" class="contact-link" style="display: inline-flex; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 4px; text-decoration: none;">
+		    View All Publications
+		    <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+		</a>
+	    </div>
+	</section>
+
 
         <section id="contact" class="section">
             <h2 class="section-title">Connect With Me</h2>
