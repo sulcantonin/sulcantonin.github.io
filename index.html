@@ -3,409 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonin Sulc - Machine Learning & Computer Vision Engineer</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>Antonin Sulc, Ph.D. - Machine Learning Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --text-color: #1f2937;
-            --bg-color: #f3f4f6;
-            --card-bg: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--card-bg);
-            padding: 2rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 10%;
-            object-fit: cover;
-            margin: 0 auto;
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #4b5563;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Skills Section */
-        .skills {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
         .skill-tag {
-            background-color: #e5e7eb;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            @apply inline-block px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full mr-2 mb-2;
         }
-
-        /* Main Content */
-        main {
-            padding: 3rem 0;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        /* Project Cards */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Publications Grid */
-        .publications-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
+        
         .publication-card {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            @apply bg-white rounded-lg shadow-md p-6 transition-transform duration-300 hover:transform hover:scale-105;
         }
-
-        .publication-card .tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
+        
+        .project-card {
+            @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl;
         }
 
         .tag {
-            background-color: #dbeafe;
-            color: var(--primary-color);
-            padding: 0.2rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-        }
-
-        /* Contact Section */
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
+            @apply inline-block px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded mr-2;
         }
 
         .contact-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            @apply inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200;
         }
 
-        .contact-link:hover {
-            color: var(--secondary-color);
+        .nav-link {
+            @apply px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200;
         }
 
-        /* Navigation */
-        nav {
-            background-color: var(--card-bg);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .section {
+            @apply py-16;
         }
 
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
+        .section-title {
+            @apply text-3xl font-bold mb-8 text-gray-800 border-b pb-2;
         }
 
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
-
-        .nav-links a:hover {
-            background-color: var(--bg-color);
-            color: var(--primary-color);
+        .paper-thumbnail {
+            @apply rounded-lg overflow-hidden mb-4 w-full h-48 object-cover;
         }
     </style>
 </head>
-<body>
-    <nav>
-        <div class="container">
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#publications">Research</a>
-                <a href="#contact">Contact</a>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-center space-x-6">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header>
-        <div class="container">
-            <div class="hero">
-                <img src="IMG_5028.JPEG" alt="Antonin Sulc">
-                <div class="hero-content">
-                    <h1>Antonin Sulc, Ph.D.</h1>
-                    <p>Machine Learning Engineer & Computer Vision Specialist | Lawrence Berkeley National Laboratory (soon, Jan 2025)</p>
-                    <p>Bridging the gap between cutting-edge research and practical AI applications.</p> 
-		    <p><a href="CV.pdf">CV</a></p>
-                    <div class="skills">
-                        <span class="skill-tag">AI</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">Quantum Computing</span>
-                        <span class="skill-tag">AI for Physics</span>
-                        <span class="skill-tag">Entrepreneurship</span>
-                    </div>
+    <!-- Hero Section -->
+    <div class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center text-center">
+                <img src="/api/placeholder/400/400" alt="Antonin Sulc" class="rounded-full shadow-lg mb-6 border-4 border-white">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">Antonin Sulc, Ph.D.</h1>
+                <p class="text-xl text-gray-600 mb-6">Machine Learning Engineer & Computer Vision Specialist</p>
+                <p class="text-lg text-gray-600 mb-6">Lawrence Berkeley National Laboratory (soon, Jan 2025)</p>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="skill-tag">AI</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Quantum Computing</span>
+                    <span class="skill-tag">AI for Physics</span>
+                    <span class="skill-tag">Entrepreneurship</span>
                 </div>
+                <a href="CV.pdf" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Download CV
+                </a>
             </div>
         </div>
-    </header>
+    </div>
 
-    <main class="container">
-        <section id="about" class="section">
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container mx-auto px-6">
             <h2 class="section-title">About Me</h2>
-            <p>I specialize in developing AI solutions for complex scientific problems, particularly in physics and particle accelerators. With a Ph.D. in Computer Vision from Uni Konstanz and extensive experience in machine learning, I bridge the gap between academic research and practical applications.</p>
-            <p>Currently working at Lawrence Berkeley National Laboratory, I focus on developing innovative AI solutions for particle accelerator control and optimization.</p>
-        </section>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <p class="text-gray-700 leading-relaxed">
+                    I specialize in developing AI solutions for complex scientific problems, particularly in physics and particle accelerators. With a Ph.D. in Computer Vision from Uni Konstanz and extensive experience in machine learning, I bridge the gap between academic research and practical applications.
+                </p>
+                <p class="text-gray-700 leading-relaxed mt-4">
+                    Currently working at Lawrence Berkeley National Laboratory, I focus on developing innovative AI solutions for particle accelerator control and optimization.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects" class="section">
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-gray-100">
+        <div class="container mx-auto px-6">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card">
-                    <h3>PACuna: AI for Particle Accelerators</h3>
-                    <p>Automated fine-tuning of language models for particle accelerator control and optimization. Achieved significant improvements in accelerator efficiency and stability.</p>
-                    <div class="tags">
+                    <img src="/api/placeholder/400/240" alt="PACuna Project" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-4">PACuna: AI for Particle Accelerators</h3>
+                    <p class="text-gray-600 mb-4">Automated fine-tuning of language models for particle accelerator control and optimization. Achieved significant improvements in accelerator efficiency and stability.</p>
+                    <div class="flex flex-wrap gap-2">
                         <span class="tag">Machine Learning</span>
                         <span class="tag">Physics</span>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>ChatQCD: AI Exploration of QCD</h3>
-                    <p>Innovative application of large language models to explore Quantum Chromodynamics, bridging AI and fundamental physics research.</p>
-                    <div class="tags">
+                    <img src="/api/placeholder/400/240" alt="ChatQCD Project" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-4">ChatQCD: AI Exploration of QCD</h3>
+                    <p class="text-gray-600 mb-4">Innovative application of large language models to explore Quantum Chromodynamics, bridging AI and fundamental physics research.</p>
+                    <div class="flex flex-wrap gap-2">
                         <span class="tag">NLP</span>
                         <span class="tag">Physics</span>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Log Anomaly Detection</h3>
-                    <p>Developed an unsupervised learning system for detecting anomalies in particle accelerator logs, improving maintenance efficiency.</p>
-                    <div class="tags">
+                    <img src="/api/placeholder/400/240" alt="Log Anomaly Detection" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-4">Log Anomaly Detection</h3>
+                    <p class="text-gray-600 mb-4">Developed an unsupervised learning system for detecting anomalies in particle accelerator logs, improving maintenance efficiency.</p>
+                    <div class="flex flex-wrap gap-2">
                         <span class="tag">Anomaly Detection</span>
                         <span class="tag">Machine Learning</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-	<section id="publications" class="section">
-	    <h2 class="section-title">Selected Publications</h2>
-	    <div class="publications-grid">
-		<!-- AI for Physics Papers -->
-		<div class="publication-card">
-		    <div class="tags">
-		        <span class="tag">2024</span>
-		        <span class="tag">NeuralIPS</span>
-		        <span class="tag">Featured</span>
-		    </div>
-		    <h3>Towards Agentic AI on Particle Accelerators</h3>
-		    <p>Novel approach to implementing autonomous AI agents for particle accelerator control and optimization.</p>
-		    <div class="paper-links" style="margin-top: 1rem;">
-		        <a href="https://arxiv.org/abs/2409.06336" class="contact-link">
-		            <i class="fas fa-file-pdf"></i> PDF
-		        </a>
-		    </div>
-		</div>
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="publication-card">
+                    <img src="/api/placeholder/400/240" alt="Agentic AI Paper" class="paper-thumbnail">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag">2024</span>
+                        <span class="tag">NeuralIPS</span>
+                        <span class="tag bg-blue-100 text-blue-800">Featured</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Towards Agentic AI on Particle Accelerators</h3>
+                    <p class="text-gray-600 mb-4">Novel approach to implementing autonomous AI agents for particle accelerator control and optimization.</p>
+                    <a href="https://arxiv.org/abs/2409.06336" class="text-blue-600 hover:text-blue-800">View PDF →</a>
+                </div>
 
-		<div class="publication-card">
-		    <div class="tags">
-		        <span class="tag">2023</span>
-		        <span class="tag">NeuralIPS</span>
-		    </div>
-		    <h3>PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators</h3>
-		    <p>Developed innovative techniques for adapting large language models to specialized particle accelerator domains, improving control system efficiency.</p>
-		    <div class="paper-links" style="margin-top: 1rem;">
-		        <a href="https://arxiv.org/abs/2310.19106" class="contact-link">
-		            <i class="fas fa-file-pdf"></i> PDF
-		        </a>
-		        <a href="https://github.com/sulcantonin/LLM_NeuralIPS23" class="contact-link">
-		            <i class="fab fa-github"></i> Code
-		        </a>
-		    </div>
-		</div>
+                <div class="publication-card">
+                    <img src="/api/placeholder/400/240" alt="PACuna Paper" class="paper-thumbnail">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag">2023</span>
+                        <span class="tag">NeuralIPS</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators</h3>
+                    <p class="text-gray-600 mb-4">Developed innovative techniques for adapting large language models to specialized particle accelerator domains.</p>
+                    <div class="flex gap-4">
+                        <a href="https://arxiv.org/abs/2310.19106" class="text-blue-600 hover:text-blue-800">View PDF →</a>
+                        <a href="https://github.com/sulcantonin/LLM_NeuralIPS23" class="text-blue-600 hover:text-blue-800">View Code →</a>
+                    </div>
+                </div>
 
-		<div class="publication-card">
-		    <div class="tags">
-		        <span class="tag">2024</span>
-		        <span class="tag">ICHEP</span>
-		    </div>
-		    <h3>ChatQCD: Let Large Language Models Explore QCD</h3>
-		    <p>Innovative application of LLMs to explore and understand Quantum Chromodynamics, demonstrating AI's potential in theoretical physics.</p>
-		    <div class="paper-links" style="margin-top: 1rem;">
-		        <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24" class="contact-link">
-		            <i class="fab fa-github"></i> Code
-		        </a>
-		    </div>
-		</div>
+                <div class="publication-card">
+                    <img src="/api/placeholder/400/240" alt="ChatQCD Paper" class="paper-thumbnail">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag">2024</span>
+                        <span class="tag">ICHEP</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">ChatQCD: Let Large Language Models Explore QCD</h3>
+                    <p class="text-gray-600 mb-4">Innovative application of LLMs to explore and understand Quantum Chromodynamics.</p>
+                    <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24" class="text-blue-600 hover:text-blue-800">View Code →</a>
+                </div>
 
-		<!-- Anomaly Detection Papers -->
-		<div class="publication-card">
-		    <div class="tags">
-		        <span class="tag">2023</span>
-		        <span class="tag">Journal of Physics</span>
-		    </div>
-		    <h3>A Data-Driven Anomaly Detection on SRF Cavities at the European XFEL</h3>
-		    <p>Developed machine learning approaches for detecting anomalies in superconducting radio-frequency cavities, improving accelerator reliability and maintenance efficiency.</p>
-		    <div class="paper-links" style="margin-top: 1rem;">
-		        <a href="https://doi.org/10.1088/1742-6596/2420/1/012070" class="contact-link">
-		            <i class="fas fa-file-pdf"></i> PDF
-		        </a>
-		        <a href="#" class="contact-link">
-		            <i class="fas fa-link"></i> DOI
-		        </a>
-		    </div>
-		</div>
+                <div class="publication-card">
+                    <img src="/api/placeholder/400/240" alt="Anomaly Detection Paper" class="paper-thumbnail">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag">2023</span>
+                        <span class="tag">Journal of Physics</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">A Data-Driven Anomaly Detection on SRF Cavities</h3>
+                    <p class="text-gray-600 mb-4">Developed machine learning approaches for detecting anomalies in superconducting radio-frequency cavities.</p>
+                    <a href="https://doi.org/10.1088/1742-6596/2420/1/012070" class="text-blue-600 hover:text-blue-800">View PDF →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- Computer Vision Papers -->
-		<div class="publication-card">
-		    <div class="tags">
-		        <span class="tag">2021</span>
-		        <span class="tag">BMVC</span>
-		        <span class="tag">Oral Presentation</span>
-		    </div>
-		    <h3>Towards Monocular Shape from Refraction</h3>
-		    <p>Novel computer vision approach for reconstructing 3D shapes from refractive effects, with applications in underwater imaging and transparent object reconstruction. Accepted as oral presentation (3.3% acceptance rate).</p>
-		    <div class="paper-links" style="margin-top: 1rem;">
-		        <a href="https://arxiv.org/abs/2305.19743" class="contact-link">
-		            <i class="fas fa-file-pdf"></i> PDF
-		        </a>
-		        <a href="https://github.com/sulcantonin/SfR-BMVC21" class="contact-link">
-		            <i class="fab fa-github"></i> Code
-		        </a>
-		    </div>
-		</div>
-
-		<div class="publication-card">
-		    <div class="tags">
-		        <span class="tag">2022</span>
-		        <span class="tag">JOSA A</span>
-		        <span class="tag">Journal</span>
-		    </div>
-		    <h3>Recovery of Geometry, Natural Illumination and BRDF from a Single Light Field Image</h3>
-		    <p>Comprehensive approach to recovering scene properties from light field imagery, published in the Journal of the Optical Society of America A (impact factor 2.129).</p>
-		    <div class="paper-links" style="margin-top: 1rem;">
-		        <a href="https://www.osapublishing.org/josaa/abstract.cfm?doi=10.1364/JOSAA.433491" class="contact-link">
-		            <i class="fas fa-file-pdf"></i> PDF
-		        </a>
-		    </div>
-		</div>
-	    </div>
-	</section>
-
-
-        <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-100">
+        <div class="container mx-auto px-6">
             <h2 class="section-title">Contact</h2>
-            <div class="contact-links">
+            <div class="flex flex-wrap justify-center gap-4">
                 <a href="https://github.com/sulcantonin" class="contact-link">
-                    <i class="fab fa-github"></i>
                     GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/antonin-sulc-0aa1101ba/" class="contact-link">
-                    <i class="fab fa-linkedin"></i>
                     LinkedIn
                 </a>
                 <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ" class="contact-link">
-                    <i class="fas fa-graduation-cap"></i>
                     Google Scholar
                 </a>
                 <a href="https://orcid.org/0000-0001-7767-778X" class="contact-link">
-                    <i class="fas fa-id-card"></i>
                     ORCID
                 </a>
             </div>
-        </section>
-    </main>
-
-	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=R0C0ra5x-6DUhu6FO7_zSVoVdWS9RLyr-CL-kni6WIU&cl=ffffff&w=a"></script>
+        </div>
+    </section>
 </body>
 </html>
