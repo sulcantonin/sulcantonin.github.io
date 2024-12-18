@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antonin Sulc, Ph.D. - Machine Learning Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Typography System */
+        :root {
+            --font-primary: 'Source Serif Pro', Georgia, serif;
+            --font-secondary: 'Lora', 'Times New Roman', serif;
+        }
+
+        /* Base Font Settings */
+        body {
+            font-family: var(--font-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-secondary);
+            letter-spacing: -0.02em;
+        }
         /* Custom Colors based on Claude's warm design - ultra light version */
         :root {
             --claude-yellow: #FAE9BC;
@@ -88,6 +107,51 @@
 
         .section {
             @apply py-20;
+            position: relative;
+        }
+
+        .section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--claude-yellow), transparent);
+        }
+
+        .section:last-child::after {
+            display: none;
+        }
+
+        /* Add decorative elements */
+        .separator-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            margin: -8px auto 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .separator-dots::before,
+        .separator-dots::after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--claude-yellow);
+            opacity: 0.6;
+        }
+
+        .separator-dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--claude-yellow);
+            opacity: 0.8;
         }
 
         .section-title {
@@ -122,7 +186,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="pt-32 pb-24" style="background: linear-gradient(135deg, white 0%, var(--claude-yellow-light) 50%, white 100%)">
+    <div class="pt-32 pb-24" style="background: linear-gradient(135deg, var(--claude-gray-light) 0%, var(--claude-gray) 50%, var(--claude-gray-light) 100%)">
         <div class="container mx-auto px-6">
             <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
                 <div class="w-48 h-48 mb-8 rounded-full overflow-hidden shadow-md border-4 border-white bg-white">
@@ -132,11 +196,11 @@
                 <p class="text-2xl text-gray-600 mb-8">Machine Learning Engineer & Computer Vision Specialist</p>
                 <p class="text-xl mb-8 font-medium" style="color: var(--claude-purple-dark)">Lawrence Berkeley National Laboratory (Starting Jan 2025)</p>
                 <div class="flex flex-wrap justify-center gap-3 mb-8">
-                    <span class="skill-tag">Computer Vision</span>
-                    <span class="skill-tag">Quantum Computing</span>
-                    <span class="skill-tag">AI for Physics</span>
+                    <span class="skill-tag">Computer Vision 👁️</span>
+                    <span class="skill-tag">Quantum Computing ⚛️</span>
+                    <span class="skill-tag">AI for Physics ⚡</span>
                 </div>
-                <a href="CV.pdf" class="px-8 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:transform hover:scale-105 text-claude-text" style="background-color: var(--claude-yellow)">
+                <a href="CV.pdf" class="px-8 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:transform hover:scale-105 text-white" style="background-color: var(--claude-gray-dark)">
                     Download CV
                 </a>
             </div>
@@ -146,12 +210,12 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container mx-auto px-6">
-            <h2 class="section-title text-center">About Me</h2>
-            <div class="bg-white rounded-xl shadow-sm p-8 max-w-4xl mx-auto border border-gray-100 hover:shadow-lg transition-all duration-300">
-                <p class="text-gray-700 leading-relaxed text-lg mb-6">
+            <h2 class="section-title text-center">About Me 👨‍💻</h2>
+            <div class="bg-white rounded-xl p-8 max-w-4xl mx-auto border border-claude-border hover:shadow-lg transition-all duration-300">
+                <p class="text-gray-700 leading-relaxed text-lg mb-6" style="font-weight: 450; letter-spacing: -0.015em;">
                     I specialize in developing AI solutions for complex scientific problems, particularly in physics and particle accelerators. With a Ph.D. in Computer Vision from Uni Konstanz and extensive experience in machine learning, I bridge the gap between academic research and practical applications.
                 </p>
-                <p class="text-gray-700 leading-relaxed text-lg">
+                <p class="text-gray-700 leading-relaxed text-lg" style="font-weight: 450; letter-spacing: -0.015em;">
                     Currently working at Lawrence Berkeley National Laboratory, I focus on developing innovative AI solutions for particle accelerator control and optimization, pushing the boundaries of what's possible in scientific computing.
                 </p>
             </div>
@@ -161,7 +225,7 @@
     <!-- Publications Section -->
     <section id="publications" class="section bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title text-center">Selected Publications</h2>
+            <h2 class="section-title text-center">Selected Publications 📚</h2>
             <div class="space-y-8 max-w-4xl mx-auto">
                 <!-- Publication Cards -->
                 <div class="publication-card">
@@ -233,11 +297,14 @@
             </div>
         </div>
     </section>
+    <div class="separator-dots">
+        <span></span>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="section bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title text-center">Get in Touch</h2>
+            <h2 class="section-title text-center">Get in Touch 📧</h2>
             <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
                 <a href="https://github.com/sulcantonin" class="contact-link">
                     GitHub
