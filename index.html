@@ -198,6 +198,16 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       </div>
 
       <div class="pub-item" data-type="workshop">
+        <h3 class="text-lg font-semibold">Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences</h3>
+        <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
+        <p class="text-sm text-gray-500 mb-3">Symmetry and Geometry in Neural Representations, 2025</p>
+        <div class="flex gap-4 text-sm">
+          <a href="https://arxiv.org/abs/2509.12188" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <button onclick="showBib('sulc2025event2vec')" class="text-blue-600 hover:underline">BibTeX</button>
+        </div>
+      </div>
+
+      <div class="pub-item" data-type="workshop">
         <h3 class="text-lg font-semibold">Quantum Noise Tomography with Physics-Informed Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2025</p>
@@ -231,7 +241,10 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">ChatQCD: Let Large Language Models Explore QCD</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">42nd International Conference on High Energy Physics (ICHEP 2024)</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm items-center">
+          <a href="https://arxiv.org/abs/2409.19021" class="text-blue-600 hover:underline" target="_blank">Arxiv</a>
+          <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24?tab=readme-ov-file" class="text-blue-600 hover:underline" target="_blank">Source</a>
+          <a href="https://huggingface.co/sulcan/CHATQCD" class="text-blue-600 hover:underline flex items-center gap-1" target="_blank">🤗 HuggingFace</a>
           <button onclick="showBib('sulc2024chatqcd')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -363,6 +376,12 @@ function showBib(id){
   author={Sulc, Antonin},
   journal={arXiv preprint arXiv:2602.08880},
   year={2026}
+}`,
+    sulc2025event2vec:`@article{sulc2025event2vec,
+  title={Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences},
+  author={Sulc, Antonin},
+  journal={arXiv preprint arXiv:2509.12188},
+  year={2025}
 }`,
     bib1:`@inproceedings{sulc2024agentic,
   title={Towards Agentic AI on Particle Accelerators},
