@@ -138,6 +138,16 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
     <div id="pub-list" class="space-y-10">
 
       <div class="pub-item" data-type="journal">
+        <h3 class="text-lg font-semibold">Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication</h3>
+        <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
+        <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
+        <div class="flex gap-4 text-sm">
+          <a href="https://arxiv.org/abs/2602.12083" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <button onclick="showBib('sulc2026multiagent')" class="text-blue-600 hover:underline">BibTeX</button>
+        </div>
+      </div>
+
+      <div class="pub-item" data-type="journal">
         <h3 class="text-lg font-semibold">Solving PDEs in One Shot via Fourier Features with Exact Analytical Derivatives</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
@@ -208,7 +218,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       </div>
 
       <div class="pub-item" data-type="conference">
-        <h3 class="text-lg font-semibold">QCD in Language Models: What They Really Know About QCD?</h3>
+        <h3 class="text-lg font-semibold">QCD in Language Models: What do they really know about QCD?</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">EPS-High Energy Physics, 2025</p>
         <div class="flex gap-4 text-sm">
@@ -333,13 +343,22 @@ function filterPub(type){
 
 function showBib(id){
   const bibs={
+    sulc2026multiagent:`@misc{sulc2026differentiablemodallogicmultiagent,
+  title={Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication}, 
+  author={Antonin Sulc},
+  year={2026},
+  eprint={2602.12083},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2602.12083}
+}`,
     sulc2026solving:`@article{sulc2026solving,
   title={Solving PDEs in One Shot via Fourier Features with Exact Analytical Derivatives},
   author={Sulc, Antonin},
   journal={arXiv preprint arXiv:2602.10541},
   year={2026}
 }`,
-    sulc2026arxiv08880:`@article{sulc2026diff,
+    sulc2026diff:`@article{sulc2026diff,
   title={Differentiable Logical Programming for Quantum Circuit Discovery and Optimization},
   author={Sulc, Antonin},
   journal={arXiv preprint arXiv:2602.08880},
