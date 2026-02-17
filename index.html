@@ -128,16 +128,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   <div class="max-w-4xl mx-auto px-6">
     <h2 class="text-2xl mb-8">Publications</h2>
 
-    <div class="flex gap-4 mb-10 text-sm">
-      <button onclick="filterPub('all')" class="filter-btn border px-3 py-1 hover:bg-gray-100 transition-colors rounded">All</button>
-      <button onclick="filterPub('journal')" class="filter-btn border px-3 py-1 hover:bg-gray-100 transition-colors rounded">Journal</button>
-      <button onclick="filterPub('conference')" class="filter-btn border px-3 py-1 hover:bg-gray-100 transition-colors rounded">Conference</button>
-      <button onclick="filterPub('workshop')" class="filter-btn border px-3 py-1 hover:bg-gray-100 transition-colors rounded">Workshop</button>
-    </div>
-
     <div id="pub-list" class="space-y-10">
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
@@ -147,7 +140,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Solving PDEs in One Shot via Fourier Features with Exact Analytical Derivatives</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
@@ -157,7 +150,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Differentiable Logical Programming for Quantum Circuit Discovery and Optimization</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
@@ -167,7 +160,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Modal Logical Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2025</p>
@@ -177,7 +170,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Agentic artificial intelligence for multistage physics experiments at a large-scale user facility particle accelerator</h3>
         <p class="text-sm text-gray-600 mb-2">T. Hellert, D. Bertwistle, S. C. Leemann, <strong>A. Sulc</strong>, M. Venturini</p>
         <p class="text-sm text-gray-500 mb-3">Physical Review Research, 2026</p>
@@ -187,7 +180,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Osprey: Production-ready agentic AI for safety-critical control systems</h3>
         <p class="text-sm text-gray-600 mb-2">T. Hellert, J. Montenegro, <strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">APL Machine Learning, 2026</p>
@@ -197,17 +190,18 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="workshop">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <p class="text-sm text-gray-500 mb-3">Symmetry and Geometry in Neural Representations, 2025</p>
+        <p class="text-sm text-gray-500 mb-3">NeurReps 2025 PMLR Proceedings (to appear)</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2509.12188" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://openreview.net/forum?id=BnexcMOz4k" class="text-blue-600 hover:underline" target="_blank">OpenReview</a>
+          <a href="https://arxiv.org/abs/2509.12188" class="text-blue-600 hover:underline" target="_blank">arXiv</a>
           <button onclick="showBib('sulc2025event2vec')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
 
-      <div class="pub-item" data-type="workshop">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Quantum Noise Tomography with Physics-Informed Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2025</p>
@@ -217,7 +211,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="conference">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">eLog Analysis for Accelerators: Status and Future Outlook</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, T. Hellert, A. Reed, A. Carpenter et al.</p>
         <p class="text-sm text-gray-500 mb-3">16th International Particle Accelerator Conference (IPAC'25)</p>
@@ -227,7 +221,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="conference">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">QCD in Language Models: What do they really know about QCD?</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">EPS-High Energy Physics, 2025</p>
@@ -237,7 +231,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="conference">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">ChatQCD: Let Large Language Models Explore QCD</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">42nd International Conference on High Energy Physics (ICHEP 2024)</p>
@@ -249,7 +243,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="workshop">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Towards Agentic AI on Particle Accelerators</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, T. Hellert, R. Kammering, H. Hoschouer, J. St. John</p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2024</p>
@@ -259,7 +253,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="conference">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Towards Unlocking Insights from Logbooks Using AI</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, G. Hartmann, J. Maldonado, V. Kain et al.</p>
         <p class="text-sm text-gray-500 mb-3">15th International Particle Accelerator Conference (IPAC'24)</p>
@@ -269,7 +263,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="workshop">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, R. Kammering, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2023</p>
@@ -279,7 +273,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Unsupervised Log Anomaly Detection with Few Unique Tokens</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">IET Information Security, 2023</p>
@@ -289,7 +283,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="conference">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Depth from Spectral Defocus Blur</h3>
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">IEEE International Conference on Image Processing (ICIP), 2019</p>
@@ -299,7 +293,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="journal">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Depth Estimation Using Spectrally Varying Defocus Blur</h3>
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">Journal of the Optical Society of America A, 2021</p>
@@ -309,7 +303,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         </div>
       </div>
 
-      <div class="pub-item" data-type="conference">
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">What Sparse Light Field Coding Reveals About Scene Structure</h3>
         <p class="text-sm text-gray-600 mb-2">O. Johannsen, <strong>A. Sulc</strong>, B. Goldluecke</p>
         <p class="text-sm text-gray-500 mb-3">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016</p>
@@ -351,11 +345,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
 </div>
 
 <script>
-function filterPub(type){
-  document.querySelectorAll('.pub-item').forEach(el=>{
-    el.style.display = (type==='all'||el.dataset.type===type)?'block':'none';
-  });
-}
+// Filter function removed as requested
 
 function showBib(id){
   const bibs={
