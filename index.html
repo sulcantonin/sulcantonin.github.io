@@ -137,15 +137,16 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
     <h2 class="text-2xl mb-8">Publications</h2>
 
     <div id="pub-list" class="space-y-10">
-      <!--
       <div class="pub-item">
-        <h3 class="text-lg font-semibold">Modal Logical Neural Networks for Financial AI</h3>
+        <h3 class="text-lg font-semibold">Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <p class="text-sm text-gray-500 mb-3">ICLR 2026 : Advances in Financial AI</p>
+        <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
         <div class="flex gap-4 text-sm">
-          </div>
+          <a href="https://arxiv.org/abs/2603.04019" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <button onclick="showBib('sulc2026continuous')" class="text-blue-600 hover:underline">BibTeX</button>
+        </div>
       </div>
-      -->
+
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
@@ -374,6 +375,15 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
 <script>
 function showBib(id){
   const bibs={
+    sulc2026continuous:`@misc{sulc2026continuous,
+  title={Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility}, 
+  author={Antonin Sulc},
+  year={2026},
+  eprint={2603.04019},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2603.04019}
+}`,
     sulc2026multiagent:`@misc{sulc2026differentiablemodallogicmultiagent,
   title={Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication}, 
   author={Antonin Sulc},
