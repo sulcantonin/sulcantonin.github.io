@@ -48,9 +48,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
 <body class="bg-white">
 
 <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
     <span class="font-semibold tracking-tight">Antonin Sulc</span>
-    <div class="space-x-6 text-sm flex items-center">
+    <div class="space-x-4 md:space-x-6 text-sm flex items-center">
       <a href="#about" class="hover:underline">About</a>
       <a href="#software" class="hover:underline">Software</a>
       <a href="#publications" class="hover:underline">Publications</a>
@@ -66,7 +66,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   
   <div class="mb-6 flex items-center justify-center gap-3">
     <img src="images/lbl.png" alt="LBNL Logo" class="h-8 w-auto">
-    <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" target="_blank" class="text-gray-600 hover:text-blue-700 hover:underline transition-colors">
+    <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-700 hover:underline transition-colors">
       Lawrence Berkeley National Laboratory
     </a>
   </div>
@@ -95,18 +95,18 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold mb-2">event2vector</h3>
         <p class="text-sm text-gray-600 mb-4">A scikit-learn style Python library providing a geometric approach to learning composable, highly interpretable representations of discrete event sequences.</p>
         <div class="flex gap-4 text-sm font-medium">
-          <a href="https://pypi.org/project/event2vector/" class="text-blue-600 hover:underline" target="_blank">PyPI</a>
-          <a href="https://github.com/sulcantonin/event2vec_public" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
+          <a href="https://pypi.org/project/event2vector/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">PyPI</a>
+          <a href="https://github.com/sulcantonin/event2vec_public" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
       <div class="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
         <h3 class="text-lg font-semibold mb-2">torchmodal</h3>
         <p class="text-sm text-gray-600 mb-4">A framework introducing Differentiable Modal Logic for PyTorch—enabling the training of Modal Logical Neural Networks (MLNNs).</p>
-        <div class="flex gap-4 text-sm font-medium">
-          <a href="https://pypi.org/project/torchmodal/" class="text-blue-600 hover:underline" target="_blank">PyPI</a>
-          <a href="https://github.com/sulcantonin/torchmodal" class="text-blue-600 hover:underline" target="_blank">GitHub (torchmodal)</a>
-          <a href="https://github.com/sulcantonin/MLNN_public" class="text-blue-600 hover:underline" target="_blank">GitHub (MLNN_public)</a>
+        <div class="flex flex-wrap gap-4 text-sm font-medium">
+          <a href="https://pypi.org/project/torchmodal/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">PyPI</a>
+          <a href="https://github.com/sulcantonin/torchmodal" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub (torchmodal)</a>
+          <a href="https://github.com/sulcantonin/MLNN_public" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub (MLNN_public)</a>
         </div>
       </div>
 
@@ -114,9 +114,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold mb-2">FastLSQ</h3>
         <p class="text-sm text-gray-600 mb-4">A lightweight framework for solving PDEs in one shot via Fourier features with exact analytical derivatives. It bypasses automatic differentiation and iterative training loops for linear and nonlinear problems.</p>
         <div class="flex gap-4 text-sm font-medium">
-          <a href="https://pypi.org/project/fastlsq/" class="text-blue-600 hover:underline" target="_blank">PyPI</a>
-          <a href="https://github.com/sulcantonin/FastLSQ" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
-          <a href="https://arxiv.org/abs/2602.10541" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://pypi.org/project/fastlsq/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">PyPI</a>
+          <a href="https://github.com/sulcantonin/FastLSQ" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://arxiv.org/abs/2602.10541" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
         </div>
       </div>
 
@@ -124,7 +124,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold mb-2">PACuna</h3>
         <p class="text-sm text-gray-600 mb-4">Automated data collection and fine-tuning pipelines designed to adapt Large Language Models securely to the complex domains of particle accelerators.</p>
         <div class="flex gap-4 text-sm font-medium">
-          <a href="https://github.com/sulcantonin/LLM_NeuralIPS23" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
+          <a href="https://github.com/sulcantonin/LLM_NeuralIPS23" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
@@ -137,12 +137,13 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
     <h2 class="text-2xl mb-8">Publications</h2>
 
     <div id="pub-list" class="space-y-10">
+      
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2603.04019" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2603.04019" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026continuous')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -152,7 +153,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2602.12083" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2602.12083" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026multiagent')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -162,7 +163,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">ICLR 2026: AI & PDE</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2602.10541" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2602.10541" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026solving')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -171,11 +172,11 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Differentiable Logical Programming for Quantum Circuit Discovery and Optimization</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
-        <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2602.08880" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="https://arxiv.org/abs/2602.08880" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026diff')" class="text-blue-600 hover:underline">BibTeX</button>
-          <a href="https://quantumzeitgeist.com/ai-quantum-fidelity-circuits-learns-bypassing-current-limitations-boosting/" class="text-blue-600 hover:underline" target="_blank"> 🎉Quantum Zeitgeist Article</a>
-          <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" class="text-blue-600 hover:underline" target="_blank">🔬Berkeley Lab Press</a>
+          <a href="https://quantumzeitgeist.com/ai-quantum-fidelity-circuits-learns-bypassing-current-limitations-boosting/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"> 🎉Quantum Zeitgeist Article</a>
+          <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">🔬Berkeley Lab Press</a>
         </div>
       </div>
 
@@ -184,7 +185,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2025</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2512.03491" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2512.03491" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025modal')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -194,7 +195,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2">T. Hellert, D. Bertwistle, S. C. Leemann, <strong>A. Sulc</strong>, M. Venturini</p>
         <p class="text-sm text-gray-500 mb-3">Physical Review Research, 2026</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://doi.org/10.1103/jtqy-9jz1" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://doi.org/10.1103/jtqy-9jz1" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('hellert2026agentic')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -204,7 +205,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2">T. Hellert, J. Montenegro, <strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">APL Machine Learning, 2026</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://doi.org/10.1063/5.0306302" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://doi.org/10.1063/5.0306302" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('hellert2026osprey')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -214,8 +215,8 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">NeurReps 2025 PMLR Proceedings (to appear)</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://openreview.net/forum?id=BnexcMOz4k" class="text-blue-600 hover:underline" target="_blank">OpenReview</a>
-          <a href="https://arxiv.org/abs/2509.12188" class="text-blue-600 hover:underline" target="_blank">arXiv</a>
+          <a href="https://openreview.net/forum?id=BnexcMOz4k" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenReview</a>
+          <a href="https://arxiv.org/abs/2509.12188" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>
           <button onclick="showBib('sulc2025event2vec')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -224,7 +225,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Quantum Noise Tomography with Physics-Informed Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2509.11911" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2509.11911" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025quantumnoise')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -234,7 +235,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, T. Hellert, A. Reed, A. Carpenter et al.</p>
         <p class="text-sm text-gray-500 mb-3">16th International Particle Accelerator Conference (IPAC'25)</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2506.12949" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2506.12949" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025elog')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -244,7 +245,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">EPS-High Energy Physics, 2025</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2512.02072" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2512.02072" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025qcd')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -254,9 +255,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">42nd International Conference on High Energy Physics (ICHEP 2024)</p>
         <div class="flex flex-wrap gap-4 text-sm items-center">
-          <a href="https://arxiv.org/abs/2409.19021" class="text-blue-600 hover:underline" target="_blank">Arxiv</a>
-          <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24?tab=readme-ov-file" class="text-blue-600 hover:underline" target="_blank">Source</a>
-          <a href="https://huggingface.co/sulcan/CHATQCD" class="text-blue-600 hover:underline flex items-center gap-1" target="_blank">🤗 HuggingFace</a>
+          <a href="https://arxiv.org/abs/2409.19021" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Arxiv</a>
+          <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24?tab=readme-ov-file" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Source</a>
+          <a href="https://huggingface.co/sulcan/CHATQCD" class="text-blue-600 hover:underline flex items-center gap-1" target="_blank" rel="noopener noreferrer">🤗 HuggingFace</a>
           <button onclick="showBib('sulc2024chatqcd')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -266,7 +267,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, T. Hellert, R. Kammering, H. Hoschouer, J. St. John</p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2024</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2409.06336" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2409.06336" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('bib1')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -276,7 +277,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, G. Hartmann, J. Maldonado, V. Kain et al.</p>
         <p class="text-sm text-gray-500 mb-3">15th International Particle Accelerator Conference (IPAC'24)</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2406.12881" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2406.12881" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2024towards')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -286,7 +287,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, R. Kammering, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2023</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2310.19106" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2310.19106" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2023pacuna')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -296,7 +297,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">IET Information Security, 2023</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2310.08951" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://arxiv.org/abs/2310.08951" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2023log')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -306,7 +307,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, A. Eichler, T. Wilsken</p>
         <p class="text-sm text-gray-500 mb-3">Journal of Physics: Conference Series, 2023</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://doi.org/10.1088/1742-6596/2420/1/012070" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://doi.org/10.1088/1742-6596/2420/1/012070" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2023datadriven')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -316,7 +317,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">IEEE International Conference on Image Processing (ICIP), 2019</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://ieeexplore.ieee.org/document/8803450" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://ieeexplore.ieee.org/document/8803450" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('ishihara2019depth')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -326,7 +327,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">Journal of the Optical Society of America A, 2021</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://opg.optica.org/josaa/abstract.cfm?uri=josaa-38-8-1140" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://opg.optica.org/josaa/abstract.cfm?uri=josaa-38-8-1140" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('ishihara2021depthestimation')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -336,7 +337,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2">O. Johannsen, <strong>A. Sulc</strong>, B. Goldluecke</p>
         <p class="text-sm text-gray-500 mb-3">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016</p>
         <div class="flex gap-4 text-sm">
-          <a href="https://openaccess.thecvf.com/content_cvpr_2016/html/Johannsen_What_Sparse_Light_CVPR_2016_paper.html" class="text-blue-600 hover:underline" target="_blank">Paper</a>
+          <a href="https://openaccess.thecvf.com/content_cvpr_2016/html/Johannsen_What_Sparse_Light_CVPR_2016_paper.html" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('johannsen2016what')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -349,9 +350,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   <div class="max-w-3xl mx-auto px-6 text-center">
     <h2 class="text-2xl mb-6">Contact</h2>
     <div class="flex justify-center space-x-6 text-sm">
-      <a href="https://github.com/sulcantonin" class="hover:underline text-gray-700" target="_blank">GitHub</a>
-      <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ" class="hover:underline text-gray-700" target="_blank">Scholar</a>
-      <a href="https://orcid.org/0000-0001-7767-778X" class="hover:underline text-gray-700" target="_blank">ORCID</a>
+      <a href="https://github.com/sulcantonin" class="hover:underline text-gray-700" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ" class="hover:underline text-gray-700" target="_blank" rel="noopener noreferrer">Scholar</a>
+      <a href="https://orcid.org/0000-0001-7767-778X" class="hover:underline text-gray-700" target="_blank" rel="noopener noreferrer">ORCID</a>
     </div>
   </div>
 </section>
@@ -363,8 +364,8 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   </div>
 </footer>
 
-<div id="bib-modal" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-  <div class="bg-white p-6 max-w-2xl w-full text-sm rounded-lg shadow-xl relative">
+<div id="bib-modal" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50" role="dialog" aria-modal="true">
+  <div class="bg-white p-6 max-w-2xl w-full text-sm rounded-lg shadow-xl relative m-4">
     <pre id="bib-content" class="whitespace-pre-wrap bg-gray-50 p-4 border rounded text-xs text-gray-800 overflow-x-auto"></pre>
     <div class="mt-4 flex justify-end">
       <button onclick="closeBib()" class="border px-4 py-2 text-sm rounded hover:bg-gray-100 transition-colors font-medium">Close</button>
@@ -537,6 +538,20 @@ function showBib(id){
 function closeBib(){
   document.getElementById('bib-modal').classList.add('hidden');
 }
+
+// Close modal when clicking outside of it
+document.getElementById('bib-modal').addEventListener('click', function(event) {
+  if (event.target === this) {
+    closeBib();
+  }
+});
+
+// Close modal when pressing the Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeBib();
+  }
+});
 </script>
 
 </body>
