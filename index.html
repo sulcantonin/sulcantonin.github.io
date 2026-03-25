@@ -60,7 +60,6 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
 </nav>
 
 <section class="py-20 text-center fade">
-  <!-- <img src="images/IMG_8237.png" alt="Antonin Sulc" class="w-28 h-28 rounded-full mx-auto mb-6 object-cover">-->
   <img src="images/antonin_portrait_b15.jpg" alt="Antonin Sulc" class="w-28 h-28 rounded-full mx-auto mb-6 object-cover">
   <h1 class="text-4xl mb-4">Antonin Sulc, Ph.D.</h1>
   <p class="text-lg text-gray-600 mb-4">AI for Autonomous Particle Accelerators</p>
@@ -325,6 +324,17 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       </div>
 
       <div class="pub-item">
+        <h3 class="text-lg font-semibold">Towards Monocular Shape from Refraction</h3>
+        <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, I. Sato, B. Goldluecke, T. Treibitz</p>
+        <p class="text-sm text-gray-500 mb-3">BMVC 2021 / arXiv preprint, 2023</p>
+        <div class="flex gap-4 text-sm">
+          <a href="https://www.bmva-archive.org.uk/bmvc/2021/conference/papers/paper_0195.html" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a href="https://github.com/sulcantonin/SfR-BMVC21" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://arxiv.org/abs/2305.19743" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>
+          <button onclick="showBib('sulc2023towards')" class="text-blue-600 hover:underline">BibTeX</button>
+        </div>
+      </div>
+      <div class="pub-item">
         <h3 class="text-lg font-semibold">Depth from Spectral Defocus Blur</h3>
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">IEEE International Conference on Image Processing (ICIP), 2019</p>
@@ -521,6 +531,12 @@ function showBib(id){
   author = {Sulc, A and Eichler, A and Wilsken, T},
   title = {A data-driven anomaly detection on SRF cavities at the European XFEL},
   journal = {Journal of Physics: Conference Series}
+}`,
+    sulc2023towards:`@article{sulc2023towards,
+  title={Towards Monocular Shape from Refraction},
+  author={Sulc, Antonin and Sato, Imari and Goldluecke, Bastian and Treibitz, Tali},
+  journal={arXiv preprint arXiv:2305.19743},
+  year={2023}
 }`,
     ishihara2019depth:`@inproceedings{ishihara2019depth,
   title={Depth from Spectral Defocus Blur},
