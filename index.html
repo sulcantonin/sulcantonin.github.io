@@ -9,10 +9,17 @@
 <meta name="author" content="Antonin Sulc">
 <meta name="keywords" content="AI, Biometrics, Neuro-Symbolic AI, Particle Accelerators, Machine Learning, Computer Vision, Physics">
 
+<link rel="canonical" href="https://sulcantonin.github.io/">
+
 <meta property="og:title" content="Antonin Sulc, Ph.D.">
 <meta property="og:description" content="Senior Researcher at Innovatrics, affiliated with LBNL. AI, neuro-symbolic reasoning and autonomous systems.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/IMG_8237.png">
+<meta property="og:url" content="https://sulcantonin.github.io/">
+<meta property="og:image" content="https://sulcantonin.github.io/images/antonin_portrait_b15.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Antonin Sulc, Ph.D.">
+<meta name="twitter:description" content="Senior Researcher at Innovatrics, affiliated with LBNL. AI, neuro-symbolic reasoning and autonomous systems.">
+<meta name="twitter:image" content="https://sulcantonin.github.io/images/antonin_portrait_b15.jpg">
 
 <script type="application/ld+json">
 {
@@ -43,6 +50,8 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -50,6 +59,10 @@ body { font-family: 'Source Serif 4', serif; color:#111827; }
 h1,h2,h3 { font-family:'Newsreader', serif; }
 .fade { animation: fade .5s ease-in; }
 @keyframes fade { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade { animation: none; }
+}
 </style>
 </head>
 
@@ -80,8 +93,8 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       </a>
     </div>
     <div class="flex items-center justify-center gap-3">
-      <img src="images/lbl.png" alt="LBNL Logo" class="h-8 w-auto">
-      <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-700 hover:underline transition-colors">
+      <img src="images/lbl.png" alt="LBNL Logo" class="h-8 w-auto" onerror="this.style.display='none'">
+      <a href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-700 hover:underline transition-colors">
         Lawrence Berkeley National Laboratory (affiliate)
       </a>
     </div>
@@ -90,7 +103,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   <a href="CV.pdf" class="border px-6 py-2 text-sm hover:bg-gray-100 transition-colors">Download CV</a>
 </section>
 
-<section id="about" class="py-16 border-t border-gray-100">
+<section id="about" class="py-16 border-t border-gray-100 scroll-mt-24">
   <div class="max-w-3xl mx-auto px-6">
     <h2 class="text-2xl mb-6">About</h2>
     <p class="leading-relaxed text-gray-700 mb-4">
@@ -102,7 +115,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   </div>
 </section>
 
-<section id="software" class="py-16 border-t border-gray-100 bg-gray-50">
+<section id="software" class="py-16 border-t border-gray-100 bg-gray-50 scroll-mt-24">
   <div class="max-w-4xl mx-auto px-6">
     <h2 class="text-2xl mb-8">Software &amp; Open Source</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -148,17 +161,17 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   </div>
 </section>
 
-<section id="publications" class="py-16 border-t border-gray-100">
+<section id="publications" class="py-16 border-t border-gray-100 scroll-mt-24">
   <div class="max-w-4xl mx-auto px-6">
     <h2 class="text-2xl mb-8">Publications</h2>
 
     <div id="pub-list" class="space-y-10">
-      
+
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2603.04019" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026continuous')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -167,10 +180,10 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <p><b>Oral talk 🎤 at <a href="https://sites.google.com/usc.edu/neus2026/home" target="_blank" rel="noopener noreferrer">3rd International Conference on Neuro-Symbolic Systems (NeuS 2026)</a>, University of Southern California</b></p>
+        <p class="text-sm mb-2"><b>Oral talk 🎤 at <a href="https://sites.google.com/usc.edu/neus2026/home" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">3rd International Conference on Neuro-Symbolic Systems (NeuS 2026)</a>, University of Southern California</b></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
-        <div class="flex gap-4 text-sm">
-          <a href="https://arxiv.org/abs/2602.12083" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>          
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="https://arxiv.org/abs/2602.12083" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026multiagent')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
@@ -178,12 +191,12 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       <div class="pub-item">
         <h3 class="text-lg font-semibold">FastLSQ: Solving PDEs in One Shot via Fourier Features with Exact Analytical Derivatives</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <p><b>Presented at 📐 ICLR 2026 Workshop on AI &amp; PDE</b></p>
+        <p class="text-sm mb-2"><b>Presented at 📐 ICLR 2026 Workshop on AI &amp; PDE</b></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2026</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2602.10541" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026solving')" class="text-blue-600 hover:underline">BibTeX</button>
-          <a href="https://openreview.net/forum?id=aEfoWq41jg&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2026%2FWorkshop%2FAI_and_PDE%2FAuthors%23your-submissions)">OpenReview</a>
+          <a href="https://openreview.net/forum?id=aEfoWq41jg" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenReview</a>
         </div>
       </div>
 
@@ -194,17 +207,17 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2602.08880" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026diff')" class="text-blue-600 hover:underline">BibTeX</button>
-          <a href="https://quantumzeitgeist.com/ai-quantum-fidelity-circuits-learns-bypassing-current-limitations-boosting/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"> 🎉Quantum Zeitgeist Article</a>
-          <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">🔬Berkeley Lab Press</a>
+          <a href="https://quantumzeitgeist.com/ai-quantum-fidelity-circuits-learns-bypassing-current-limitations-boosting/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">🎉 Quantum Zeitgeist Article</a>
+          <a href="https://x.com/LBNLpress/status/2021994068071547092?s=20" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">🔬 Berkeley Lab Press</a>
         </div>
       </div>
 
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Modal Logical Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <p><b>Accepted at 🎉 <a href="https://2026.nesyconf.org/" target="_blank" rel="noopener noreferrer">20th International Conference on Neurosymbolic Learning and Reasoning (NeSy 2026)</a>, Lisbon</b></p>
+        <p class="text-sm mb-2"><b>Accepted at 🎉 <a href="https://2026.nesyconf.org/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">20th International Conference on Neurosymbolic Learning and Reasoning (NeSy 2026)</a>, Lisbon</b></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2025</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2512.03491" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025modal')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -214,7 +227,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Agentic artificial intelligence for multistage physics experiments at a large-scale user facility particle accelerator</h3>
         <p class="text-sm text-gray-600 mb-2">T. Hellert, D. Bertwistle, S. C. Leemann, <strong>A. Sulc</strong>, M. Venturini</p>
         <p class="text-sm text-gray-500 mb-3">Physical Review Research, 2026</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://doi.org/10.1103/jtqy-9jz1" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('hellert2026agentic')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -224,7 +237,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Osprey: Production-ready agentic AI for safety-critical control systems</h3>
         <p class="text-sm text-gray-600 mb-2">T. Hellert, J. Montenegro, <strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">APL Machine Learning, 2026</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://doi.org/10.1063/5.0306302" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('hellert2026osprey')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -234,7 +247,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">NeurReps 2025 PMLR Proceedings (to appear)</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://openreview.net/forum?id=BnexcMOz4k" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">OpenReview</a>
           <a href="https://arxiv.org/abs/2509.12188" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>
           <button onclick="showBib('sulc2025event2vec')" class="text-blue-600 hover:underline">BibTeX</button>
@@ -245,7 +258,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Modal Logical Neural Networks for Financial AI</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
         <p class="text-sm text-gray-500 mb-3">ICLR 2026: FinAI</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2603.12487" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2026modallogicalneuralnetworks')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -254,7 +267,8 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Quantum Noise Tomography with Physics-Informed Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <div class="flex gap-4 text-sm">
+        <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2025</p>
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2509.11911" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025quantumnoise')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -264,7 +278,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">eLog Analysis for Accelerators: Status and Future Outlook</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, T. Hellert, A. Reed, A. Carpenter et al.</p>
         <p class="text-sm text-gray-500 mb-3">16th International Particle Accelerator Conference (IPAC'25)</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2506.12949" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025elog')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -274,7 +288,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">QCD in Language Models: What do they really know about QCD?</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">EPS-High Energy Physics, 2025</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2512.02072" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025qcd')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -285,8 +299,8 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, P. Connor</p>
         <p class="text-sm text-gray-500 mb-3">42nd International Conference on High Energy Physics (ICHEP 2024)</p>
         <div class="flex flex-wrap gap-4 text-sm items-center">
-          <a href="https://arxiv.org/abs/2409.19021" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Arxiv</a>
-          <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24?tab=readme-ov-file" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Source</a>
+          <a href="https://arxiv.org/abs/2409.19021" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>
+          <a href="https://github.com/sulcantonin/CHATQCD_ICHEP24" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Source</a>
           <a href="https://huggingface.co/sulcan/CHATQCD" class="text-blue-600 hover:underline flex items-center gap-1" target="_blank" rel="noopener noreferrer">🤗 HuggingFace</a>
           <button onclick="showBib('sulc2024chatqcd')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -296,9 +310,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Towards Agentic AI on Particle Accelerators</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, T. Hellert, R. Kammering, H. Hoschouer, J. St. John</p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2024</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2409.06336" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
-          <button onclick="showBib('bib1')" class="text-blue-600 hover:underline">BibTeX</button>
+          <button onclick="showBib('sulc2024agentic')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
 
@@ -306,7 +320,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Towards Unlocking Insights from Logbooks Using AI</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, G. Hartmann, J. Maldonado, V. Kain et al.</p>
         <p class="text-sm text-gray-500 mb-3">15th International Particle Accelerator Conference (IPAC'24)</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2406.12881" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2024towards')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -316,7 +330,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">PACuna: Automated Fine-Tuning of Language Models for Particle Accelerators</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, R. Kammering, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">NeurIPS ML4Physics Workshop, 2023</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2310.19106" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2023pacuna')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -326,7 +340,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Unsupervised Log Anomaly Detection with Few Unique Tokens</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">IET Information Security, 2023</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://arxiv.org/abs/2310.08951" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2023log')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -334,9 +348,9 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
 
       <div class="pub-item">
         <h3 class="text-lg font-semibold">A data-driven anomaly detection on SRF cavities at the European XFEL</h3>
-        <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, A. Eichler, T. Wilsken</p>
+        <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, A. Eichler, T. Wilksen</p>
         <p class="text-sm text-gray-500 mb-3">Journal of Physics: Conference Series, 2023</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://doi.org/10.1088/1742-6596/2420/1/012070" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2023datadriven')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -345,19 +359,21 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Towards Monocular Shape from Refraction</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong>, I. Sato, B. Goldluecke, T. Treibitz</p>
-        <p class="text-sm text-gray-500 mb-3">BMVC 2021 / arXiv preprint, 2023</p> ORAL 🚀
-        <div class="flex gap-4 text-sm">
+        <p class="text-sm mb-2"><b>Oral 🚀 at BMVC 2021</b></p>
+        <p class="text-sm text-gray-500 mb-3">BMVC 2021 / arXiv preprint, 2023</p>
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://www.bmva-archive.org.uk/bmvc/2021/conference/papers/paper_0195.html" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <a href="https://github.com/sulcantonin/SfR-BMVC21" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://arxiv.org/abs/2305.19743" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>
           <button onclick="showBib('sulc2023towards')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
       </div>
+
       <div class="pub-item">
         <h3 class="text-lg font-semibold">Depth from Spectral Defocus Blur</h3>
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">IEEE International Conference on Image Processing (ICIP), 2019</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://ieeexplore.ieee.org/document/8803450" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('ishihara2019depth')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -367,7 +383,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">Depth Estimation Using Spectrally Varying Defocus Blur</h3>
         <p class="text-sm text-gray-600 mb-2">S. Ishihara, <strong>A. Sulc</strong>, I. Sato</p>
         <p class="text-sm text-gray-500 mb-3">Journal of the Optical Society of America A, 2021</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://opg.optica.org/josaa/abstract.cfm?uri=josaa-38-8-1140" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('ishihara2021depthestimation')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -377,7 +393,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <h3 class="text-lg font-semibold">What Sparse Light Field Coding Reveals About Scene Structure</h3>
         <p class="text-sm text-gray-600 mb-2">O. Johannsen, <strong>A. Sulc</strong>, B. Goldluecke</p>
         <p class="text-sm text-gray-500 mb-3">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://openaccess.thecvf.com/content_cvpr_2016/html/Johannsen_What_Sparse_Light_CVPR_2016_paper.html" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('johannsen2016what')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -387,7 +403,7 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   </div>
 </section>
 
-<section id="contact" class="py-16 border-t border-gray-100">
+<section id="contact" class="py-16 border-t border-gray-100 scroll-mt-24">
   <div class="max-w-3xl mx-auto px-6 text-center">
     <h2 class="text-2xl mb-6">Contact</h2>
     <div class="flex justify-center space-x-6 text-sm">
@@ -398,32 +414,24 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
   </div>
 </section>
 
-<!-- this is the clustermaps, it seems it is gone forever
 <footer class="py-8 text-center text-xs text-gray-500 border-t border-gray-200">
-  <div class="mb-4">© 2026 Antonin Sulc</div>
-  <div class="flex justify-center mx-auto w-64">
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=R0C0ra5x-6DUhu6FO7_zSVoVdWS9RLyr-CL-kni6WIU&cl=ffffff&w=a"></script>
-  </div>
+  © 2026 Antonin Sulc
 </footer>
--->
 
-<!-- <script data-goatcounter="https://sulcantonin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>-->
-<a href="https://mapmyvisitors.com/web/1c6hn" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=dFmfhBzIh_M_ZbGGMYLrGVYBzUrGu-W5I8z1FrLa7b4&cl=ffffff"></a>
-
-<div id="bib-modal" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50" role="dialog" aria-modal="true">
+<div id="bib-modal" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50" role="dialog" aria-labelledby="bib-title">
   <div class="bg-white p-6 max-w-2xl w-full text-sm rounded-lg shadow-xl relative m-4">
+    <h2 id="bib-title" class="sr-only">BibTeX entry</h2>
     <pre id="bib-content" class="whitespace-pre-wrap bg-gray-50 p-4 border rounded text-xs text-gray-800 overflow-x-auto"></pre>
     <div class="mt-4 flex justify-end">
-      <button onclick="closeBib()" class="border px-4 py-2 text-sm rounded hover:bg-gray-100 transition-colors font-medium">Close</button>
+      <button id="bib-close" onclick="closeBib()" class="border px-4 py-2 text-sm rounded hover:bg-gray-100 transition-colors font-medium">Close</button>
     </div>
   </div>
 </div>
 
 <script>
-function showBib(id){
-  const bibs={
-    sulc2026continuous:`@misc{sulc2026continuous,
-  title={Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility}, 
+const BIBS = {
+  sulc2026continuous:`@misc{sulc2026continuous,
+  title={Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility},
   author={Antonin Sulc},
   year={2026},
   eprint={2603.04019},
@@ -431,8 +439,8 @@ function showBib(id){
   primaryClass={cs.AI},
   url={https://arxiv.org/abs/2603.04019}
 }`,
-    sulc2026multiagent:`@inproceedings{sulc2026differentiablemodallogicmultiagent,
-  title={Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication}, 
+  sulc2026multiagent:`@inproceedings{sulc2026differentiablemodallogicmultiagent,
+  title={Differentiable Modal Logic for Multi-Agent Diagnosis, Orchestration and Communication},
   author={Antonin Sulc},
   booktitle={3rd International Conference on Neuro-Symbolic Systems (NeuS)},
   note={Oral presentation},
@@ -442,29 +450,38 @@ function showBib(id){
   primaryClass={cs.AI},
   url={https://arxiv.org/abs/2602.12083}
 }`,
-    sulc2026solving:`@inproceedings{sulc2026fastlsqframeworkoneshotpde,
-      title={FastLSQ: A Framework for One-Shot PDE Solving}, 
-      author={Antonin Sulc},
-      booktitle={ICLR 2026 Workshop on AI and PDE},
-      year={2026},
-      eprint={2602.10541},
-      archivePrefix={arXiv},
-      primaryClass={math.NA},
-      url={https://arxiv.org/abs/2602.10541}, 
+  sulc2026solving:`@inproceedings{sulc2026fastlsqframeworkoneshotpde,
+  title={FastLSQ: A Framework for One-Shot PDE Solving},
+  author={Antonin Sulc},
+  booktitle={ICLR 2026 Workshop on AI and PDE},
+  year={2026},
+  eprint={2602.10541},
+  archivePrefix={arXiv},
+  primaryClass={math.NA},
+  url={https://arxiv.org/abs/2602.10541}
 }`,
-    sulc2026diff:`@article{sulc2026diff,
+  sulc2026diff:`@article{sulc2026diff,
   title={Differentiable Logical Programming for Quantum Circuit Discovery and Optimization},
   author={Sulc, Antonin},
   journal={arXiv preprint arXiv:2602.08880},
   year={2026}
 }`,
-    sulc2025event2vec:`@article{sulc2025event2vec,
+  sulc2026modallogicalneuralnetworks:`@inproceedings{sulc2026modalfinancial,
+  title={Modal Logical Neural Networks for Financial AI},
+  author={Sulc, Antonin},
+  booktitle={ICLR 2026 Workshop on Financial AI (FinAI)},
+  year={2026},
+  eprint={2603.12487},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2603.12487}
+}`,
+  sulc2025event2vec:`@article{sulc2025event2vec,
   title={Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences},
   author={Sulc, Antonin},
   journal={arXiv preprint arXiv:2509.12188},
   year={2025}
 }`,
-    bib1:`@inproceedings{sulc2024agentic,
+  sulc2024agentic:`@inproceedings{sulc2024agentic,
   title={Towards Agentic AI on Particle Accelerators},
   author={Sulc, Antonin and Hellert, Thorsten and Kammering, Raimund and Hoschouer, Hayden and St. John, Jason},
   booktitle={NeurIPS Machine Learning and the Physical Sciences Workshop},
@@ -472,7 +489,7 @@ function showBib(id){
   eprint={2409.06336},
   archivePrefix={arXiv}
 }`,
-    hellert2026agentic:`@article{hellert2026agentic,
+  hellert2026agentic:`@article{hellert2026agentic,
   title={Agentic artificial intelligence for multistage physics experiments at a large-scale user facility particle accelerator},
   author={Hellert, Thorsten and Bertwistle, Drew and Leemann, Simon C. and Sulc, Antonin and Venturini, Marco},
   journal={Physical Review Research},
@@ -481,7 +498,7 @@ function showBib(id){
   year={2026},
   doi={10.1103/jtqy-9jz1}
 }`,
-    hellert2026osprey:`@article{hellert2026osprey,
+  hellert2026osprey:`@article{hellert2026osprey,
   title={Osprey: Production-ready agentic AI for safety-critical control systems},
   author={Hellert, Thorsten and Montenegro, Jo{\\~a}o and Sulc, Antonin},
   journal={APL Machine Learning},
@@ -491,7 +508,7 @@ function showBib(id){
   year={2026},
   doi={10.1063/5.0306302}
 }`,
-    sulc2025modal:`@inproceedings{sulc2026modal,
+  sulc2025modal:`@inproceedings{sulc2026modal,
   title={Modal Logical Neural Networks},
   author={Sulc, Antonin},
   booktitle={20th International Conference on Neurosymbolic Learning and Reasoning (NeSy)},
@@ -500,7 +517,7 @@ function showBib(id){
   archivePrefix={arXiv},
   url={https://arxiv.org/abs/2512.03491}
 }`,
-    sulc2025quantumnoise:`@inproceedings{sulc2025quantumnoise,
+  sulc2025quantumnoise:`@inproceedings{sulc2025quantumnoise,
   title={Quantum Noise Tomography with Physics-Informed Neural Networks},
   author={Sulc, Antonin},
   booktitle={NeurIPS Machine Learning and the Physical Sciences Workshop},
@@ -508,27 +525,27 @@ function showBib(id){
   eprint={2509.11911},
   archivePrefix={arXiv}
 }`,
-    sulc2025elog:`@inproceedings{sulc2025elog,
+  sulc2025elog:`@inproceedings{sulc2025elog,
   title={eLog Analysis for Accelerators: Status and Future Outlook},
-  author={Sulc, Antonin and Hellert, Thorsten and Britton, T. and Carpenter, A. and others},
+  author={Sulc, Antonin and Hellert, Thorsten and Reed, A. and Carpenter, A. and others},
   booktitle={16th International Particle Accelerator Conference (IPAC'25)},
   year={2025},
   eprint={2506.12949},
   archivePrefix={arXiv}
 }`,
-    sulc2025qcd:`@article{sulc2025qcd,
+  sulc2025qcd:`@article{sulc2025qcd,
   title={QCD in Language Models: What do they really know about QCD?},
   author={Sulc, Antonin and Connor, Patrick L.S.},
   journal={arXiv preprint arXiv:2512.02072},
   year={2025}
 }`,
-    sulc2024chatqcd:`@inproceedings{sulc2024chatqcd,
+  sulc2024chatqcd:`@inproceedings{sulc2024chatqcd,
   title={ChatQCD: Let Large Language Models Explore QCD},
   author={Sulc, Antonin and Connor, Patrick L.S.},
   booktitle={42nd International Conference on High Energy Physics (ICHEP 2024)},
   year={2024}
 }`,
-    sulc2024towards:`@inproceedings{sulc2024towards,
+  sulc2024towards:`@inproceedings{sulc2024towards,
   title={Towards Unlocking Insights from Logbooks Using AI},
   author={Sulc, A. and Hartmann, G. and Maldonado, J. and Kain, V. and others},
   booktitle={Proc. IPAC'24},
@@ -536,20 +553,20 @@ function showBib(id){
   year={2024},
   doi={10.18429/JACoW-IPAC2024-THPR37}
 }`,
-    sulc2023pacuna:`@inproceedings{sulc2023pacuna,
+  sulc2023pacuna:`@inproceedings{sulc2023pacuna,
   title={{PAC}una: {A}utomated {F}ine-{T}uning of {L}anguage {M}odels for {P}article {A}ccelerators},
   author={Sulc, Antonin and Kammering, Raimund and Eichler, Annika and Wilksen, Tim},
   booktitle={NeurIPS Machine Learning and the Physical Sciences Workshop},
   year={2023},
   url={https://arxiv.org/abs/2310.19106}
 }`,
-    sulc2023log:`@article{sulc2023log,
+  sulc2023log:`@article{sulc2023log,
   title={Unsupervised Log Anomaly Detection with Few Unique Tokens},
   author={Sulc, Antonin and Eichler, Annika and Wilksen, Tim},
   journal={IET Information Security},
   year={2023}
 }`,
-    sulc2023datadriven:`@article{Sulc_2023,
+  sulc2023datadriven:`@article{Sulc_2023,
   doi = {10.1088/1742-6596/2420/1/012070},
   url = {https://doi.org/10.1088/1742-6596/2420/1/012070},
   year = {2023},
@@ -558,17 +575,17 @@ function showBib(id){
   volume = {2420},
   number = {1},
   pages = {012070},
-  author = {Sulc, A and Eichler, A and Wilsken, T},
+  author = {Sulc, A and Eichler, A and Wilksen, T},
   title = {A data-driven anomaly detection on SRF cavities at the European XFEL},
   journal = {Journal of Physics: Conference Series}
 }`,
-    sulc2023towards:`@article{sulc2023towards,
+  sulc2023towards:`@article{sulc2023towards,
   title={Towards Monocular Shape from Refraction},
   author={Sulc, Antonin and Sato, Imari and Goldluecke, Bastian and Treibitz, Tali},
   journal={arXiv preprint arXiv:2305.19743},
   year={2023}
 }`,
-    ishihara2019depth:`@inproceedings{ishihara2019depth,
+  ishihara2019depth:`@inproceedings{ishihara2019depth,
   title={Depth from Spectral Defocus Blur},
   author={Ishihara, Shin and Sulc, Antonin and Sato, Imari},
   booktitle={2019 IEEE International Conference on Image Processing (ICIP)},
@@ -576,43 +593,60 @@ function showBib(id){
   year={2019},
   doi={10.1109/ICIP.2019.8803450}
 }`,
-    ishihara2021depthestimation:`@article{ishihara2021depthestimation,
+  ishihara2021depthestimation:`@article{ishihara2021depthestimation,
   title={Depth estimation using spectrally varying defocus blur},
   author={Ishihara, Shin and Sulc, Antonin and Sato, Imari},
   journal={Journal of the Optical Society of America A},
   year={2021}
 }`,
-    johannsen2016what:`@inproceedings{johannsen2016what,
+  johannsen2016what:`@inproceedings{johannsen2016what,
   title={What Sparse Light Field Coding Reveals About Scene Structure},
   author={Johannsen, Ole and Sulc, Antonin and Goldluecke, Bastian},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2016}
 }`
-  };
-  document.getElementById('bib-content').innerText=bibs[id];
-  document.getElementById('bib-modal').classList.remove('hidden');
+};
+
+const bibModal = document.getElementById('bib-modal');
+const bibContent = document.getElementById('bib-content');
+const bibClose = document.getElementById('bib-close');
+let bibTrigger = null;
+
+function isBibOpen(){
+  return !bibModal.classList.contains('hidden');
+}
+
+function showBib(id){
+  const entry = BIBS[id];
+  if (!entry) {
+    console.warn('Missing BibTeX entry:', id);
+    return;
+  }
+  bibTrigger = document.activeElement;
+  bibContent.textContent = entry;
+  bibModal.classList.remove('hidden');
+  bibModal.setAttribute('aria-modal', 'true');
+  if (bibClose) bibClose.focus();
 }
 
 function closeBib(){
-  document.getElementById('bib-modal').classList.add('hidden');
+  bibModal.classList.add('hidden');
+  bibModal.removeAttribute('aria-modal');
+  if (bibTrigger && typeof bibTrigger.focus === 'function') bibTrigger.focus();
+  bibTrigger = null;
 }
 
-// Close modal when clicking outside of it
-document.getElementById('bib-modal').addEventListener('click', function(event) {
-  if (event.target === this) {
-    closeBib();
-  }
+bibModal.addEventListener('click', function(event){
+  if (event.target === this) closeBib();
 });
 
-// Close modal when pressing the Escape key
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    closeBib();
-  }
+document.addEventListener('keydown', function(event){
+  if (event.key === 'Escape' && isBibOpen()) closeBib();
 });
 </script>
-  <script async data-id="101509644" src="//static.getclicky.com/js"></script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101509644ns.gif" /></p></noscript>
+
+<script async data-id="101509644" src="https://static.getclicky.com/js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="https://in.getclicky.com/101509644ns.gif" /></p></noscript>
 
 </body>
 </html>
