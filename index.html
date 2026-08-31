@@ -363,7 +363,11 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
         <p class="text-sm text-gray-500 mb-3">BMVC 2021 / arXiv preprint, 2023</p>
         <div class="flex flex-wrap gap-4 text-sm">
           <a href="https://www.bmva-archive.org.uk/bmvc/2021/conference/papers/paper_0195.html" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a href="https://www.bmva-archive.org.uk/bmvc/2021/assets/papers/0195.pdf" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">PDF</a>
+          <a href="https://doi.org/10.5244/C.35.52" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">DOI</a>
+          <a href="https://www.bmva-archive.org.uk/bmvc/2021/assets/supp/0195_supp.zip" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Supplementary</a>
           <a href="https://github.com/sulcantonin/SfR-BMVC21" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.bmva-archive.org.uk/bmvc/2021/conference/papers/?session=O2&amp;filter=keywords" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Session</a>
           <a href="https://arxiv.org/abs/2305.19743" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">arXiv</a>
           <button onclick="showBib('sulc2023towards')" class="text-blue-600 hover:underline">BibTeX</button>
         </div>
@@ -579,11 +583,13 @@ const BIBS = {
   title = {A data-driven anomaly detection on SRF cavities at the European XFEL},
   journal = {Journal of Physics: Conference Series}
 }`,
-  sulc2023towards:`@article{sulc2023towards,
+  sulc2023towards:`@inproceedings{sulc2021monocular,
   title={Towards Monocular Shape from Refraction},
   author={Sulc, Antonin and Sato, Imari and Goldluecke, Bastian and Treibitz, Tali},
-  journal={arXiv preprint arXiv:2305.19743},
-  year={2023}
+  booktitle={Proceedings of the 32nd British Machine Vision Conference (BMVC)},
+  year={2021},
+  doi={10.5244/C.35.52},
+  url={https://www.bmva-archive.org.uk/bmvc/2021/conference/papers/paper_0195.html}
 }`,
   ishihara2019depth:`@inproceedings{ishihara2019depth,
   title={Depth from Spectral Defocus Blur},
