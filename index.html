@@ -109,8 +109,11 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
     <p class="leading-relaxed text-gray-700 mb-4">
       I am a Senior Researcher at <a href="https://www.innovatrics.com/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Innovatrics</a>, and I remain affiliated with Lawrence Berkeley National Laboratory (LBNL) as a Researcher.
     </p>
-    <p class="leading-relaxed text-gray-700">
+    <p class="leading-relaxed text-gray-700 mb-4">
       Previously a Senior Data Scientist at the Helmholtz Association (DESY/XFEL), I pioneered the use of domain-specific language models in scientific contexts. Holding a Ph.D. in Computer Vision from the University of Konstanz, I actively apply the mathematical rigor of high-dimensional signal processing to extract actionable insights from complex, multi-modal data.
+    </p>
+    <p class="leading-relaxed text-gray-700">
+      Read a short interview about my work and background: <a href="https://atap.lbl.gov/news/3q4-antonin-sulc/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">3Q4 with Antonin Sulc (ATAP, LBNL)</a>.
     </p>
   </div>
 </section>
@@ -213,13 +216,16 @@ h1,h2,h3 { font-family:'Newsreader', serif; }
       </div>
 
       <div class="pub-item">
-        <h3 class="text-lg font-semibold">Modal Logical Neural Networks</h3>
+        <h3 class="text-lg font-semibold">Modal Logic Neural Networks</h3>
         <p class="text-sm text-gray-600 mb-2"><strong>A. Sulc</strong></p>
-        <p class="text-sm mb-2"><b>Accepted at 🎉 <a href="https://2026.nesyconf.org/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">20th International Conference on Neurosymbolic Learning and Reasoning (NeSy 2026)</a>, Lisbon</b></p>
+        <p class="text-sm mb-2"><b>Oral talk 🎤, presented at 🎉 <a href="https://2026.nesyconf.org/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">20th International Conference on Neurosymbolic Learning and Reasoning (NeSy 2026)</a>, Lisbon</b></p>
         <p class="text-sm text-gray-500 mb-3">arXiv preprint, 2025</p>
-        <div class="flex flex-wrap gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm items-center">
           <a href="https://arxiv.org/abs/2512.03491" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Paper</a>
           <button onclick="showBib('sulc2025modal')" class="text-blue-600 hover:underline">BibTeX</button>
+          <a href="presentations/nesy-mlnn-talk_7min.pdf" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Presentation</a>
+          <a href="posters/nesy-mlnn-poster.pdf" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Poster</a>
+          <a href="image/nesy-mlnn-presentation.png" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">📸 Oral presentation photo</a>
         </div>
       </div>
 
@@ -513,9 +519,10 @@ const BIBS = {
   doi={10.1063/5.0306302}
 }`,
   sulc2025modal:`@inproceedings{sulc2026modal,
-  title={Modal Logical Neural Networks},
+  title={Modal Logic Neural Networks},
   author={Sulc, Antonin},
   booktitle={20th International Conference on Neurosymbolic Learning and Reasoning (NeSy)},
+  note={Oral presentation},
   year={2026},
   eprint={2512.03491},
   archivePrefix={arXiv},
