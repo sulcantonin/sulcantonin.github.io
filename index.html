@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
 
 <title>Antonin Sulc, Ph.D. | Neuro-Symbolic AI and Scientific Machine Learning</title>
 <meta name="description" content="Antonin Sulc, Senior Researcher at Innovatrics and LBNL affiliate: modal logical neural networks, one-shot PDE solvers and agentic AI for particle accelerators.">
@@ -20,14 +22,14 @@
 <meta property="og:description" content="I build neural networks that reason with modal logic, one-shot PDE solvers, and AI agents that run experiments on particle accelerators.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sulcantonin.github.io/">
-<meta property="og:image" content="https://sulcantonin.github.io/images/social/home.png">
+<meta property="og:image" content="https://sulcantonin.github.io/images/social/home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Antonin Sulc: Senior Researcher in neuro-symbolic AI and scientific machine learning">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Antonin Sulc, Ph.D.">
 <meta name="twitter:description" content="I build neural networks that reason with modal logic, one-shot PDE solvers, and AI agents that run experiments on particle accelerators.">
-<meta name="twitter:image" content="https://sulcantonin.github.io/images/social/home.png">
+<meta name="twitter:image" content="https://sulcantonin.github.io/images/social/home.jpg">
 
 <script type="application/ld+json">
 {
@@ -40,7 +42,7 @@
       "alternateName": "Antonín Šulc",
       "jobTitle": "Senior Researcher",
       "description": "I build neural networks that reason with modal logic, one-shot PDE solvers, and AI agents that run experiments on particle accelerators.",
-      "image": "https://sulcantonin.github.io/images/antonin_portrait_b15.jpg",
+      "image": "https://sulcantonin.github.io/images/portrait/poster.jpg",
       "url": "https://sulcantonin.github.io/",
       "worksFor": {
         "@type": "Organization",
@@ -95,8 +97,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
+<!-- Only fetched when the 3D viewer is opened -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.min.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+    "@sparkjsdev/spark": "https://cdn.jsdelivr.net/npm/@sparkjsdev/spark@2.2.0/dist/spark.module.min.js"
+  }
+}
+</script>
 <style>
 :root{
+  color-scheme:light dark;
   --gray-50:#f9fafb;
   --gray-100:#f3f4f6;
   --gray-200:#e5e7eb;
@@ -111,6 +124,51 @@
   --topic-sciml:#0f766e;
   --topic-accel:#b45309;
   --topic-cv:#7c3aed;
+
+  /* Semantic tokens (redefined for dark mode below) */
+  --bg:#fff;
+  --bg-alt:var(--gray-50);
+  --surface:#fff;
+  --text:var(--gray-900);
+  --text-2:var(--gray-800);
+  --text-3:var(--gray-700);
+  --text-4:var(--gray-600);
+  --muted:var(--gray-500);
+  --border:var(--gray-200);
+  --border-soft:var(--gray-100);
+  --hover:var(--gray-100);
+  --link:var(--blue-600);
+  --link-hover:var(--blue-700);
+  --solid-bg:var(--gray-900);
+  --solid-bg-hover:var(--gray-800);
+  --solid-fg:#fff;
+  --shadow:0 1px 2px rgb(17 24 39 / .06), 0 18px 40px -18px rgb(17 24 39 / .35);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --topic-nesy:#6c9cff;
+    --topic-sciml:#2dbfa9;
+    --topic-accel:#e8a04a;
+    --topic-cv:#a98bff;
+    --bg:#0f1115;
+    --bg-alt:#14171c;
+    --surface:#181b21;
+    --text:#eceef1;
+    --text-2:#dadde2;
+    --text-3:#c3c8cf;
+    --text-4:#a9afb8;
+    --muted:#8a919b;
+    --border:#2a2f37;
+    --border-soft:#1d2128;
+    --hover:#222730;
+    --link:#7fa8ff;
+    --link-hover:#a9c4ff;
+    --solid-bg:#eceef1;
+    --solid-bg-hover:#ffffff;
+    --solid-fg:#111827;
+    --shadow:0 1px 2px rgb(0 0 0 / .4), 0 18px 40px -18px rgb(0 0 0 / .8);
+  }
+  .affiliation img{background:#fff; border-radius:4px; padding:2px;}
 }
 
 *{box-sizing:border-box;}
@@ -118,21 +176,21 @@ html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:'Source Serif 4', Georgia, serif;
-  color:var(--gray-900);
-  background:#fff;
+  color:var(--text);
+  background:var(--bg);
   font-size:16px;
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3{font-family:'Newsreader', Georgia, serif; font-weight:600; margin:0;}
 img{max-width:100%;}
-a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline-offset:2px; border-radius:2px;}
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px solid var(--link); outline-offset:2px; border-radius:2px;}
 
-.skip-link{position:absolute; left:-999px; top:0; background:#fff; padding:.5rem 1rem; z-index:100;}
+.skip-link{position:absolute; left:-999px; top:0; background:var(--bg); color:var(--text); padding:.5rem 1rem; z-index:100;}
 .skip-link:focus{left:1rem; top:1rem;}
 
 /* Nav */
-.site-nav{position:sticky; top:0; z-index:40; background:#fff; border-bottom:1px solid var(--gray-200);}
+.site-nav{position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter:saturate(1.4) blur(10px); backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--border);}
 .nav-inner{
   max-width:64rem; margin:0 auto; padding:1rem 1.5rem;
   display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;
@@ -153,63 +211,114 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
 }
 
 /* Layout */
-.section{padding:4rem 0; border-top:1px solid var(--gray-100); scroll-margin-top:6rem;}
-.section--alt{background:var(--gray-50);}
+.section{padding:4rem 0; border-top:1px solid var(--border-soft); scroll-margin-top:6rem;}
+.section--alt{background:var(--bg-alt);}
 .section h2{font-size:1.5rem; margin-bottom:1.75rem;}
 .container{margin:0 auto; padding:0 1.5rem;}
 .container--narrow{max-width:48rem;}
 .container--wide{max-width:56rem;}
 
 /* Hero */
-.hero{padding:5rem 1.5rem 4rem; text-align:center;}
-.portrait{width:7rem; height:7rem; border-radius:9999px; margin:0 auto 1.5rem; object-fit:cover; display:block;}
-.hero h1{font-size:2.25rem; margin-bottom:.75rem;}
-.subtitle{font-size:1.125rem; color:var(--gray-600); margin:0 0 1rem;}
-.lead{font-size:1.1875rem; line-height:1.55; color:var(--gray-800); max-width:36rem; margin:0 auto 1.75rem;}
+.hero{padding:4.5rem 1.5rem 4rem;}
+.hero-grid{max-width:58rem; margin:0 auto; display:grid; gap:2.25rem; justify-items:center; align-items:center; text-align:center;}
+.hero-text{max-width:36rem;}
+.hero h1{font-size:2.25rem; line-height:1.15; margin-bottom:.75rem; text-wrap:balance;}
+.subtitle{font-size:1.125rem; color:var(--text-4); margin:0 0 1rem; text-wrap:balance;}
+.lead{font-size:1.1875rem; line-height:1.55; color:var(--text-2); max-width:36rem; margin:0 auto 1.75rem; text-wrap:pretty;}
 .affiliations{display:flex; flex-direction:column; align-items:center; gap:.75rem; margin-bottom:1.75rem;}
 .affiliation{display:flex; align-items:center; justify-content:center; gap:.75rem;}
 .affiliation img{height:2rem; width:auto;}
-.affiliation a{color:var(--gray-600); text-decoration:none; transition:color .15s;}
-.affiliation a:hover{color:var(--blue-700); text-decoration:underline;}
+.affiliation a{color:var(--text-4); text-decoration:none; transition:color .15s;}
+.affiliation a:hover{color:var(--link-hover); text-decoration:underline;}
 .hero-actions{display:flex; flex-wrap:wrap; justify-content:center; gap:.75rem; margin-bottom:1.25rem;}
 .hero-socials{display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.25rem; font-size:.875rem;}
-.hero-socials a{color:var(--gray-700); text-decoration:none;}
-.hero-socials a:hover{color:var(--blue-700); text-decoration:underline;}
+.hero-socials a{color:var(--text-3); text-decoration:none;}
+.hero-socials a:hover{color:var(--link-hover); text-decoration:underline;}
+@media (min-width:860px){
+  .hero{padding:5.5rem 1.5rem 5rem;}
+  .hero-grid{grid-template-columns:minmax(0, 1fr) 19rem; gap:4rem; justify-items:start; text-align:left;}
+  .hero h1{font-size:2.75rem;}
+  .lead{margin-left:0;}
+  .affiliations{align-items:flex-start;}
+  .affiliation, .hero-actions, .hero-socials{justify-content:flex-start;}
+}
+
+/* 3D portrait card: poster image, looping render on top, interactive viewer on demand */
+.portrait3d{position:relative; margin:0; width:min(15rem, 66vw); aspect-ratio:4 / 5; border-radius:1.25rem; overflow:hidden; background:var(--bg-alt); box-shadow:var(--shadow); isolation:isolate; order:-1;}
+@media (min-width:860px){ .portrait3d{order:0; width:19rem; justify-self:end;} }
+.portrait3d img, .portrait3d video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;}
+.portrait3d video{opacity:0; transition:opacity .8s ease;}
+.portrait3d.is-playing video{opacity:1;}
+.portrait3d-controls{position:absolute; left:.75rem; right:.75rem; bottom:.75rem; display:flex; justify-content:space-between; align-items:center; gap:.5rem; z-index:1;}
+.pill{
+  display:inline-flex; align-items:center; gap:.4rem; height:2.125rem; padding:0 .875rem;
+  border:1px solid rgb(255 255 255 / .35); border-radius:999px; cursor:pointer;
+  background:rgb(17 24 39 / .45); color:#fff; font:inherit; font-size:.8125rem; letter-spacing:.01em;
+  -webkit-backdrop-filter:blur(10px) saturate(1.3); backdrop-filter:blur(10px) saturate(1.3);
+  transition:background .15s, transform .15s;
+}
+.pill:hover{background:rgb(17 24 39 / .65);}
+.pill:active{transform:scale(.97);}
+.pill:focus-visible{outline:2px solid #fff; outline-offset:2px;}
+.pill svg{width:.95rem; height:.95rem; flex:none;}
+.pill--icon{width:2.125rem; padding:0; justify-content:center;}
+.pill--icon .icon-play{display:none;}
+.pill--icon[aria-pressed="true"] .icon-play{display:block;}
+.pill--icon[aria-pressed="true"] .icon-pause{display:none;}
+.portrait3d:not(.has-video) .pill--icon, .portrait3d:not(.has-3d) [data-viewer-open]{display:none;}
+
+/* 3D viewer dialog */
+.viewer{border:none; padding:0; background:transparent; color:#fff; max-width:none; max-height:none; width:100%; height:100%; overflow:hidden;}
+.viewer::backdrop{background:rgb(8 10 14 / .88); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);}
+.viewer[open]{display:flex; align-items:center; justify-content:center;}
+.viewer-box{display:flex; flex-direction:column; align-items:center; gap:.875rem; padding:1rem; width:min-content;}
+.viewer-stage{position:relative; height:min(78vh, 56rem, calc((100vw - 2rem) * 1.25)); aspect-ratio:4 / 5; border-radius:1.25rem; overflow:hidden; background:#000; box-shadow:0 30px 80px -20px rgb(0 0 0 / .8); touch-action:none; cursor:grab;}
+.viewer-stage:active{cursor:grabbing;}
+.viewer-stage img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .6s ease;}
+.viewer-stage.is-live img{opacity:0;}
+.viewer-canvas{position:absolute; inset:0; width:100%; height:100%; display:block;}
+.viewer-progress{position:absolute; left:1.25rem; right:1.25rem; bottom:1.25rem; height:3px; border-radius:3px; background:rgb(255 255 255 / .25); overflow:hidden; transition:opacity .4s;}
+.viewer-progress span{display:block; height:100%; width:0; background:#fff; transition:width .2s;}
+.viewer-stage.is-live .viewer-progress{opacity:0;}
+.viewer-bar{display:flex; align-items:center; justify-content:space-between; gap:1rem; width:100%; font-size:.8125rem; color:rgb(255 255 255 / .75);}
+.viewer-bar p{margin:0; max-width:34rem;}
+.viewer-bar a{color:#fff;}
+.viewer .pill{flex:none;}
 
 /* Buttons */
 .btn{
-  display:inline-block; border:1px solid var(--gray-200); background:#fff;
+  display:inline-block; border:1px solid var(--border); background:var(--surface);
   padding:.5rem 1.5rem; font-size:.875rem; color:inherit; text-decoration:none;
   cursor:pointer; font-family:inherit; transition:background .15s;
 }
-.btn:hover{background:var(--gray-100);}
-.btn--dark{background:var(--gray-900); border-color:var(--gray-900); color:#fff;}
-.btn--dark:hover{background:var(--gray-800);}
+.btn:hover{background:var(--hover);}
+.btn--dark{background:var(--solid-bg); border-color:var(--solid-bg); color:var(--solid-fg);}
+.btn--dark:hover{background:var(--solid-bg-hover);}
 
 /* Prose */
-.prose p{color:var(--gray-700); line-height:1.65; margin:0 0 1rem;}
+.prose p{color:var(--text-3); line-height:1.65; margin:0 0 1rem;}
 .prose p:last-child{margin-bottom:0;}
-.prose a{color:var(--blue-600); text-decoration:none;}
+.prose a{color:var(--link); text-decoration:none;}
 .prose a:hover{text-decoration:underline;}
 
 /* Highlights */
 .highlights{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.875rem;}
-.highlights li{padding-left:1.25rem; position:relative; color:var(--gray-700);}
-.highlights li::before{content:""; position:absolute; left:0; top:.6em; width:.45rem; height:.45rem; background:var(--gray-900);}
-.highlights a{color:var(--blue-600); text-decoration:none;}
+.highlights li{padding-left:1.25rem; position:relative; color:var(--text-3);}
+.highlights li::before{content:""; position:absolute; left:0; top:.6em; width:.45rem; height:.45rem; background:var(--text);}
+.highlights a{color:var(--link); text-decoration:none;}
 .highlights a:hover{text-decoration:underline;}
 
 /* Software cards */
 .cards{display:grid; grid-template-columns:1fr; gap:1.5rem;}
 @media (min-width:768px){ .cards{grid-template-columns:1fr 1fr;} }
-.card{background:#fff; border:1px solid var(--gray-200); padding:1.5rem; border-radius:.5rem;}
+.card{background:var(--surface); border:1px solid var(--border); padding:1.5rem; border-radius:.5rem;}
 .card h3{font-size:1.125rem; margin-bottom:.5rem;}
-.card p{font-size:.875rem; color:var(--gray-600); line-height:1.5; margin:0 0 1rem;}
+.card p{font-size:.875rem; color:var(--text-4); line-height:1.5; margin:0 0 1rem;}
 
 /* Link rows */
 .links{display:flex; flex-wrap:wrap; gap:.5rem 1rem; font-size:.875rem; align-items:center;}
 .links a, .links button{
-  color:var(--blue-600); font-weight:500; text-decoration:none;
+  color:var(--link); font-weight:500; text-decoration:none;
   background:none; border:none; padding:0; font:inherit; cursor:pointer;
 }
 .links a:hover, .links button:hover{text-decoration:underline;}
@@ -218,33 +327,33 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
 .filters{display:flex; flex-wrap:wrap; gap:.5rem; margin:0 0 .75rem;}
 .chip{
   display:inline-flex; align-items:center; gap:.45rem;
-  border:1px solid var(--gray-200); background:#fff; color:var(--gray-700);
+  border:1px solid var(--border); background:var(--surface); color:var(--text-3);
   padding:.375rem .75rem; font:inherit; font-size:.8125rem; cursor:pointer; border-radius:999px;
 }
-.chip:hover{border-color:var(--gray-500);}
-.chip[aria-pressed="true"]{background:var(--gray-900); border-color:var(--gray-900); color:#fff;}
-.chip .count{color:var(--gray-500); font-variant-numeric:tabular-nums;}
-.chip[aria-pressed="true"] .count{color:var(--gray-200);}
+.chip:hover{border-color:var(--muted);}
+.chip[aria-pressed="true"]{background:var(--solid-bg); border-color:var(--solid-bg); color:var(--solid-fg);}
+.chip .count{color:var(--muted); font-variant-numeric:tabular-nums;}
+.chip[aria-pressed="true"] .count{color:inherit; opacity:.7;}
 .dot{width:.55rem; height:.55rem; border-radius:999px; display:inline-block; flex:none;}
 .dot--nesy{background:var(--topic-nesy);} .dot--sciml{background:var(--topic-sciml);}
 .dot--accel{background:var(--topic-accel);} .dot--cv{background:var(--topic-cv);}
-.filter-status{font-size:.8125rem; color:var(--gray-500); margin:0 0 2rem;}
+.filter-status{font-size:.8125rem; color:var(--muted); margin:0 0 2rem;}
 
 /* Publications */
 .pub-list{display:flex; flex-direction:column; gap:2.25rem;}
 .pub-item[hidden]{display:none;}
 .pub-item{scroll-margin-top:6rem; padding-left:1rem; margin-left:-1rem; border-left:3px solid transparent; transition:border-color .3s, background-color .3s;}
-.pub-item:target{border-left-color:var(--gray-900); background:#fff;}
+.pub-item:target{border-left-color:var(--text); background:var(--surface);}
 .pub-item h3{font-size:1.125rem; line-height:1.35;}
 .pub-item h3 a{color:inherit; text-decoration:none;}
 .pub-item h3 a:hover{text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px;}
 .pub-topics{display:inline-flex; gap:.3rem; margin-right:.5rem; vertical-align:.12em;}
-.authors{font-size:.875rem; color:var(--gray-600); margin:.375rem 0 .5rem;}
+.authors{font-size:.875rem; color:var(--text-4); margin:.375rem 0 .5rem;}
 .venue{font-size:.875rem; font-weight:600; margin:0 0 .5rem;}
-.venue a{color:var(--blue-600); text-decoration:none;}
+.venue a{color:var(--link); text-decoration:none;}
 .venue a:hover{text-decoration:underline;}
-.date{font-size:.875rem; color:var(--gray-500); margin:0 0 .5rem;}
-.tldr{font-size:.9375rem; color:var(--gray-700); margin:0 0 .75rem; max-width:44rem;}
+.date{font-size:.875rem; color:var(--muted); margin:0 0 .5rem;}
+.tldr{font-size:.9375rem; color:var(--text-3); margin:0 0 .75rem; max-width:44rem;}
 
 /* Talks & media */
 .two-col{display:grid; grid-template-columns:1fr; gap:2.5rem;}
@@ -254,48 +363,48 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
 .plain-list .item-title{font-weight:500; margin:0 0 .125rem;}
 .plain-list .item-title a{color:inherit; text-decoration:none;}
 .plain-list .item-title a:hover{text-decoration:underline;}
-.plain-list .item-meta{font-size:.875rem; color:var(--gray-600); margin:0 0 .375rem;}
+.plain-list .item-meta{font-size:.875rem; color:var(--text-4); margin:0 0 .375rem;}
 
 /* Contact */
 .contact{text-align:center;}
-.contact p{color:var(--gray-700); margin:0 0 1.5rem;}
+.contact p{color:var(--text-3); margin:0 0 1.5rem;}
 .contact-links{display:flex; flex-wrap:wrap; justify-content:center; gap:.75rem 1.5rem; font-size:.875rem;}
-.contact-links a{color:var(--gray-700); text-decoration:none;}
+.contact-links a{color:var(--text-3); text-decoration:none;}
 .contact-links a:hover{text-decoration:underline;}
 
 /* Footer */
-.site-footer{padding:2rem 1.5rem; text-align:center; font-size:.75rem; color:var(--gray-500); border-top:1px solid var(--gray-200);}
+.site-footer{padding:2rem 1.5rem; text-align:center; font-size:.75rem; color:var(--muted); border-top:1px solid var(--border);}
 .site-footer p{margin:.25rem 0;}
 
 /* Paper page */
 .paper{padding:3rem 1.5rem 4rem;}
 .paper .back{font-size:.875rem; margin:0 0 2rem;}
-.paper .back a{color:var(--gray-600); text-decoration:none;}
+.paper .back a{color:var(--text-4); text-decoration:none;}
 .paper .back a:hover{text-decoration:underline;}
-.paper .topic-line{display:flex; flex-wrap:wrap; gap:.75rem; font-size:.8125rem; color:var(--gray-600); margin:0 0 .75rem;}
+.paper .topic-line{display:flex; flex-wrap:wrap; gap:.75rem; font-size:.8125rem; color:var(--text-4); margin:0 0 .75rem;}
 .paper .topic-line a{color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:.4rem;}
 .paper .topic-line a:hover{text-decoration:underline;}
 .paper h1{font-size:2rem; line-height:1.2; margin-bottom:1rem;}
 .paper .authors{font-size:1rem;}
 .paper .links{margin:1.25rem 0 2.5rem; font-size:.9375rem;}
 .paper h2{font-size:1.25rem; margin:2.5rem 0 .75rem;}
-.paper .summary{color:var(--gray-700); line-height:1.7; margin:0;}
+.paper .summary{color:var(--text-3); line-height:1.7; margin:0;}
 .bib-block{position:relative;}
 .bib-block .btn{margin-top:.75rem;}
 .related{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.75rem;}
-.related a{color:var(--blue-600); text-decoration:none;}
+.related a{color:var(--link); text-decoration:none;}
 .related a:hover{text-decoration:underline;}
 .related .date{margin:0;}
 
 /* Modal + code */
 .modal{position:fixed; inset:0; background:rgba(0,0,0,.4); display:flex; align-items:center; justify-content:center; z-index:60; padding:1rem;}
 .modal.hidden{display:none;}
-.modal-box{background:#fff; padding:1.5rem; max-width:42rem; width:100%; position:relative; border-radius:.5rem; box-shadow:0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);}
+.modal-box{background:var(--surface); padding:1.5rem; max-width:42rem; width:100%; position:relative; border-radius:.5rem; box-shadow:0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);}
 .modal-pre, .bib-pre{
   white-space:pre-wrap; overflow-x:auto; margin:0; max-height:60vh;
-  background:var(--gray-50); padding:1rem; border:1px solid var(--gray-200); border-radius:.25rem;
+  background:var(--bg-alt); padding:1rem; border:1px solid var(--border); border-radius:.25rem;
   font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size:.75rem; color:var(--gray-800);
+  font-size:.75rem; color:var(--text-2);
 }
 .modal-actions{margin-top:1rem; display:flex; justify-content:flex-end; gap:.5rem;}
 
@@ -306,6 +415,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   .fade{animation:none;}
+  .portrait3d video, .viewer-stage img{transition:none;}
 }
 </style>
 </head>
@@ -329,32 +439,52 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
 
 <main id="main">
 <section class="hero fade">
-  <img src="images/antonin_portrait_b15.jpg" alt="Portrait of Antonin Sulc" class="portrait" width="112" height="112" fetchpriority="high">
-  <h1>Antonin Sulc, Ph.D.</h1>
-  <p class="subtitle">Senior Researcher in neuro-symbolic AI and scientific machine learning</p>
-  <p class="lead">I build neural networks that reason with modal logic, one-shot PDE solvers, and AI agents that run experiments on particle accelerators.</p>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1>Antonin Sulc, Ph.D.</h1>
+      <p class="subtitle">Senior Researcher in neuro-symbolic AI and scientific machine learning</p>
+      <p class="lead">I build neural networks that reason with modal logic, one-shot PDE solvers, and AI agents that run experiments on particle accelerators.</p>
 
-  <div class="affiliations">
-    <div class="affiliation">
-      <img src="images/innovatrics.png" alt="" height="32" onerror="this.style.display='none'">
-      <a href="https://www.innovatrics.com/" target="_blank" rel="noopener noreferrer">Innovatrics</a>
-    </div>
-    <div class="affiliation">
-      <img src="images/lbl.png" alt="" height="32" onerror="this.style.display='none'">
-      <a href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">Lawrence Berkeley National Laboratory (affiliate)</a>
-    </div>
-  </div>
+      <div class="affiliations">
+        <div class="affiliation">
+          <a href="https://www.innovatrics.com/" target="_blank" rel="noopener noreferrer">Innovatrics</a>
+        </div>
+        <div class="affiliation">
+          <img src="images/lbl.png" alt="" height="32" onerror="this.style.display='none'">
+          <a href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">Lawrence Berkeley National Laboratory (affiliate)</a>
+        </div>
+      </div>
 
-  <div class="hero-actions">
-    <a href="CV.pdf" class="btn" data-umami-event="cv-download">Download CV</a>
-    <a class="btn btn--dark" href="#contact" data-email-user="asulc" data-email-domain="lbl.gov" data-umami-event="email-click">Email me</a><noscript> asulc [at] lbl.gov</noscript>
-  </div>
-  <div class="hero-socials">
-    <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ" target="_blank" rel="me noopener noreferrer">Google Scholar</a>
-    <a href="https://github.com/sulcantonin" target="_blank" rel="me noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/antonin-sulc-0aa1101ba/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
-    <a href="https://huggingface.co/sulcan" target="_blank" rel="me noopener noreferrer">Hugging Face</a>
-    <a href="https://orcid.org/0000-0001-7767-778X" target="_blank" rel="me noopener noreferrer">ORCID</a>
+      <div class="hero-actions">
+        <a href="CV.pdf" class="btn" data-umami-event="cv-download">Download CV</a>
+        <a class="btn btn--dark" href="#contact" data-email-user="asulc" data-email-domain="lbl.gov" data-umami-event="email-click">Email me</a><noscript> asulc [at] lbl.gov</noscript>
+      </div>
+      <div class="hero-socials">
+        <a href="https://scholar.google.de/citations?user=H-_KIEoAAAAJ" target="_blank" rel="me noopener noreferrer">Google Scholar</a>
+        <a href="https://github.com/sulcantonin" target="_blank" rel="me noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/antonin-sulc-0aa1101ba/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+        <a href="https://huggingface.co/sulcan" target="_blank" rel="me noopener noreferrer">Hugging Face</a>
+        <a href="https://orcid.org/0000-0001-7767-778X" target="_blank" rel="me noopener noreferrer">ORCID</a>
+      </div>
+    </div>
+
+    <figure class="portrait3d" id="portrait3d">
+      <img src="images/portrait/poster.jpg" srcset="images/portrait/poster-360.jpg 360w, images/portrait/poster.jpg 720w" sizes="(min-width: 860px) 19rem, 66vw" width="720" height="900" alt="Portrait of Antonin Sulc on a Seattle ferry at sunset" fetchpriority="high">
+      <video muted loop playsinline preload="none" width="720" height="900" aria-hidden="true" tabindex="-1">
+        <source src="images/portrait/loop.webm" type="video/webm">
+        <source src="images/portrait/loop.mp4" type="video/mp4">
+      </video>
+      <figcaption class="portrait3d-controls">
+        <button type="button" class="pill" data-viewer-open data-umami-event="portrait-3d-open" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg>
+          View in 3D
+        </button>
+        <button type="button" class="pill pill--icon" data-motion-toggle aria-pressed="false" aria-label="Pause portrait motion">
+          <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+        </button>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -803,8 +933,22 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
 
 <footer class="site-footer">
   <p>© 2026 Antonin Sulc</p>
-  <p>Last updated <time datetime="2026-09-30">30 September 2026</time></p>
+  <p>Last updated <time datetime="2026-10-11">11 October 2026</time></p>
 </footer>
+
+<dialog id="viewer3d" class="viewer" aria-labelledby="viewer3d-title">
+  <div class="viewer-box">
+    <h2 id="viewer3d-title" class="sr-only">Antonin Sulc, interactive 3D portrait</h2>
+    <div class="viewer-stage" id="viewer3d-stage" tabindex="0" aria-describedby="viewer3d-hint">
+      <img src="images/portrait/poster.jpg" alt="">
+      <div class="viewer-progress" role="progressbar" aria-label="Loading 3D model" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+    </div>
+    <div class="viewer-bar">
+      <p id="viewer3d-hint">Move the pointer, drag or use the arrow keys to look around; scroll or pinch to step closer. A 3D Gaussian-splat scene predicted from one photo with Apple's <a href="https://github.com/apple/ml-sharp" target="_blank" rel="noopener noreferrer">SHARP</a>.</p>
+      <button type="button" class="pill" data-viewer-close>Close</button>
+    </div>
+  </div>
+</dialog>
 
 <div id="bib-modal" class="modal hidden" role="dialog" aria-labelledby="bib-title">
   <div class="modal-box">
@@ -954,6 +1098,89 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--blue-600); outline
     };
     window.addEventListener('hashchange', reveal);
     reveal();
+  }
+
+  /* 3D portrait: looping render in the hero, interactive splat viewer on demand */
+  var figure = document.getElementById('portrait3d');
+  if (figure) {
+    var video = figure.querySelector('video');
+    var toggle = figure.querySelector('[data-motion-toggle]');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var saveData = navigator.connection && navigator.connection.saveData;
+    var userPaused = reduce.matches, visible = true, viewerOpen = false;
+
+    var sync = function(){
+      if (!figure.classList.contains('has-video')) return;
+      if (visible && !userPaused && !viewerOpen && !document.hidden) {
+        video.preload = 'auto';
+        var p = video.play();
+        if (p && p.catch) p.catch(function(){});
+      } else if (!video.paused) {
+        video.pause();
+      }
+      toggle.setAttribute('aria-pressed', String(userPaused));
+      toggle.setAttribute('aria-label', userPaused ? 'Play portrait motion' : 'Pause portrait motion');
+    };
+
+    if (video && !saveData) {
+      figure.classList.add('has-video');
+      video.addEventListener('playing', function(){ figure.classList.add('is-playing'); });
+      toggle.addEventListener('click', function(){ userPaused = !userPaused; sync(); });
+      if (reduce.addEventListener) reduce.addEventListener('change', function(){ userPaused = reduce.matches; sync(); });
+      document.addEventListener('visibilitychange', sync);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(entries){ visible = entries[0].isIntersecting; sync(); }).observe(figure);
+      } else {
+        sync();
+      }
+    }
+
+    var dialog = document.getElementById('viewer3d');
+    var stage = document.getElementById('viewer3d-stage');
+    var canUse3d = dialog && dialog.showModal && 'WebGL2RenderingContext' in window &&
+      window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports('importmap');
+    if (canUse3d) {
+      figure.classList.add('has-3d');
+      var progress = stage.querySelector('.viewer-progress');
+      var hint = document.getElementById('viewer3d-hint');
+      var dispose = null, opener = null, session = 0;
+
+      var openViewer = function(){
+        var mine = ++session;
+        opener = document.activeElement;
+        viewerOpen = true; sync();
+        progress.firstElementChild.style.width = '0';
+        dialog.showModal();
+        stage.focus();
+        import('./js/portrait3d.js').then(function(m){
+          return m.mountPortrait3D(stage, {
+            url: 'images/portrait/portrait.spz',
+            onProgress: function(f){
+              progress.firstElementChild.style.width = (f * 100).toFixed(1) + '%';
+              progress.setAttribute('aria-valuenow', String(Math.round(f * 100)));
+            }
+          });
+        }).then(function(d){
+          if (mine !== session || !dialog.open) { d(); return; }
+          dispose = d;
+          stage.classList.add('is-live');
+        }).catch(function(err){
+          console.error(err);
+          hint.textContent = 'Sorry, the 3D view could not be loaded in this browser.';
+        });
+      };
+
+      dialog.addEventListener('close', function(){
+        session++;
+        if (dispose) { dispose(); dispose = null; }
+        stage.classList.remove('is-live');
+        viewerOpen = false; sync();
+        if (opener && opener.focus) opener.focus();
+      });
+      figure.querySelector('[data-viewer-open]').addEventListener('click', openViewer);
+      dialog.querySelector('[data-viewer-close]').addEventListener('click', function(){ dialog.close(); });
+      dialog.addEventListener('click', function(e){ if (e.target === dialog) dialog.close(); });
+    }
   }
 })();
 </script>
