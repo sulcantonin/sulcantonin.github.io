@@ -10,7 +10,7 @@
 <title>Antonin Sulc, Ph.D. | Neuro-Symbolic AI and Scientific Machine Learning</title>
 <meta name="description" content="Antonin Sulc, Senior Researcher at Innovatrics and LBNL affiliate: modal logical neural networks, one-shot PDE solvers and agentic AI for particle accelerators.">
 <meta name="author" content="Antonin Sulc">
-<meta name="keywords" content="Antonin Sulc, Antonín Šulc, Neuro-Symbolic AI, Modal Logical Neural Networks, MLNN, torchmodal, Differentiable Modal Logic, Event2Vec, FastLSQ, Physics-Informed Neural Networks, Agentic AI, Particle Accelerators, Computer Vision, Innovatrics, Lawrence Berkeley National Laboratory">
+<meta name="keywords" content="Antonin Sulc, Antonín Šulc, Neuro-Symbolic AI, Modal Logical Neural Networks, MLNN, torchmodal, Differentiable Modal Logic, Belief Functions, Dempster-Shafer, Event2Vec, FastLSQ, Physics-Informed Neural Networks, Agentic AI, Particle Accelerators, Computer Vision, Innovatrics, Lawrence Berkeley National Laboratory">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <link rel="canonical" href="https://sulcantonin.github.io/">
@@ -65,6 +65,7 @@
         "Neuro-Symbolic AI",
         "Modal Logical Neural Networks",
         "Differentiable Modal Logic",
+        "Belief Functions",
         "Scientific Machine Learning",
         "Physics-Informed Neural Networks",
         "Agentic AI",
@@ -492,6 +493,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
   <div class="container container--narrow">
     <h2 id="highlights-h">Recent highlights</h2>
     <ul class="highlights">
+      <li>New paper in Springer's <em>Belief Functions: Theory and Applications</em>: <a href="#pub-differentiable-belief-function-layers">Neural Networks with Differentiable Belief-Function Layers</a>, with code in <a href="https://github.com/sulcantonin/enn-public" target="_blank" rel="noopener noreferrer">enn-public</a>.</li>
       <li>Event2Vec is now published in <a href="https://proceedings.mlr.press/v282/sulc26a.html" target="_blank" rel="noopener noreferrer">Proceedings of Machine Learning Research, Vol. 282</a> (NeurIPS NeurReps workshops).</li>
       <li>Oral talk at <a href="https://2026.nesyconf.org/" target="_blank" rel="noopener noreferrer">NeSy 2026</a> in Lisbon on <a href="#pub-modal-logic-neural-networks">Modal Logic Neural Networks</a>.</li>
       <li>Oral talk at <a href="https://sites.google.com/usc.edu/neus2026/home" target="_blank" rel="noopener noreferrer">NeuS 2026</a> (University of Southern California) on <a href="#pub-differentiable-modal-logic-multi-agent">differentiable modal logic for multi-agent systems</a>.</li>
@@ -516,6 +518,14 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
   <div class="container container--wide">
     <h2 id="software-h">Software &amp; Open Source</h2>
     <div class="cards">
+
+      <div class="card">
+        <h3>enn-public</h3>
+        <p>Code for deep evidential networks with differentiable belief-function layers: every mass in the pipeline is a valid Dempster–Shafer mass function, combined with Yager's rule, so the mass on the ignorance set serves as an "I do not know" signal.</p>
+        <div class="links">
+          <a href="https://github.com/sulcantonin/enn-public" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="#pub-differentiable-belief-function-layers">Paper</a>
+        </div>
+      </div>
 
       <div class="card">
         <h3>event2vector</h3>
@@ -557,16 +567,29 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
   <div class="container container--wide">
     <h2 id="publications-h">Publications</h2>
     <div class="filters" role="group" aria-label="Filter publications by topic">
-      <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span class="count">22</span></button>
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span class="count">23</span></button>
       <button type="button" class="chip" data-filter="featured" aria-pressed="false">Selected <span class="count">5</span></button>
-      <button type="button" class="chip" data-filter="nesy" aria-pressed="false"><span class="dot dot--nesy"></span>Neuro-symbolic AI <span class="count">5</span></button>
+      <button type="button" class="chip" data-filter="nesy" aria-pressed="false"><span class="dot dot--nesy"></span>Neuro-symbolic AI <span class="count">6</span></button>
       <button type="button" class="chip" data-filter="sciml" aria-pressed="false"><span class="dot dot--sciml"></span>Scientific &amp; geometric ML <span class="count">3</span></button>
       <button type="button" class="chip" data-filter="accel" aria-pressed="false"><span class="dot dot--accel"></span>AI for accelerators &amp; physics <span class="count">10</span></button>
       <button type="button" class="chip" data-filter="cv" aria-pressed="false"><span class="dot dot--cv"></span>Computer vision <span class="count">4</span></button>
     </div>
-    <p class="filter-status" id="filter-status" aria-live="polite">Showing 22 of 22 publications</p>
+    <p class="filter-status" id="filter-status" aria-live="polite">Showing 23 of 23 publications</p>
 
     <div id="pub-list" class="pub-list">
+
+      <article class="pub-item" id="pub-differentiable-belief-function-layers" data-topics="nesy" data-featured="false">
+  <h3><span class="pub-topics" aria-hidden="true"><span class="dot dot--nesy" title="Neuro-symbolic AI"></span></span><a href="https://doi.org/10.1007/978-3-032-41960-6_7" target="_blank" rel="noopener noreferrer">Neural Networks with Differentiable Belief-Function Layers</a></h3>
+  <p class="authors"><strong>A. Sulc</strong></p>
+  <p class="venue">Published in <em>Belief Functions: Theory and Applications</em>, Springer Nature Switzerland</p>
+  <p class="date">Springer, Cham, pp. 61–71, 2027</p>
+  <p class="tldr">Deep evidential networks built entirely from Dempster–Shafer mass functions combined with Yager's rule, whose mass on ignorance flags contested inputs and ranks human disagreement without ever seeing annotator distributions.</p>
+  <div class="links">
+    <a href="https://doi.org/10.1007/978-3-032-41960-6_7" target="_blank" rel="noopener noreferrer">Paper (Springer)</a>
+    <a href="https://github.com/sulcantonin/enn-public" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <button type="button" data-bib="10.1007/978-3-032-41960-6_7">BibTeX</button>
+  </div>
+</article>
 
       <article class="pub-item" id="pub-event2vec" data-topics="sciml" data-featured="true">
   <h3><span class="pub-topics" aria-hidden="true"><span class="dot dot--sciml" title="Scientific &amp; geometric ML"></span></span><a href="https://proceedings.mlr.press/v282/sulc26a.html" target="_blank" rel="noopener noreferrer">Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences</a></h3>
@@ -933,7 +956,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
 
 <footer class="site-footer">
   <p>© 2026 Antonin Sulc</p>
-  <p>Last updated <time datetime="2026-10-11">11 October 2026</time></p>
+  <p>Last updated <time datetime="2026-10-18">18 October 2026</time></p>
 </footer>
 
 <dialog id="viewer3d" class="viewer" aria-labelledby="viewer3d-title">
@@ -963,6 +986,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
 
 <script type="application/json" id="bib-data">
 {
+ "10.1007/978-3-032-41960-6_7": "@InProceedings{10.1007/978-3-032-41960-6_7,\n  author    = {Sulc, Antonin},\n  editor    = {Den{\\oe}ux, Thierry and Jousselme, Anne-Laure and Su, Zhi-Gang},\n  title     = {Neural Networks with Differentiable Belief-Function Layers},\n  booktitle = {Belief Functions: Theory and Applications},\n  year      = {2027},\n  publisher = {Springer Nature Switzerland},\n  address   = {Cham},\n  pages     = {61--71},\n  isbn      = {978-3-032-41960-6},\n  doi       = {10.1007/978-3-032-41960-6_7},\n  url       = {https://doi.org/10.1007/978-3-032-41960-6_7}\n}",
  "pmlr-v282-sulc26a": "@InProceedings{pmlr-v282-sulc26a,\n  title     = {Event2Vec: A Geometric Approach to Learning Composable Representations of Event Sequences},\n  author    = {Sulc, Antonin},\n  booktitle = {Proceedings of the 4th (2025) and 3rd (2024) NeurIPS Workshops on Symmetry and Geometry in Neural Representations},\n  pages     = {492--512},\n  year      = {2026},\n  editor    = {Acosta, Francisco and Azeglio, Simone and Tolooshams, Bahareh and van de Geijn, Chase and Shewmake, Christian and Sanborn, Sophia and Miolane, Nina},\n  volume    = {282},\n  series    = {Proceedings of Machine Learning Research},\n  month     = {14 Dec 2024--07 Dec 2025},\n  publisher = {PMLR},\n  pdf       = {https://raw.githubusercontent.com/mlresearch/v282/main/assets/sulc26a/sulc26a.pdf},\n  url       = {https://proceedings.mlr.press/v282/sulc26a.html}\n}",
  "sulc2026continuous": "@misc{sulc2026continuous,\n  title={Continuous Modal Logical Neural Networks: Modal Reasoning via Stochastic Accessibility},\n  author={Antonin Sulc},\n  year={2026},\n  eprint={2603.04019},\n  archivePrefix={arXiv},\n  primaryClass={cs.AI},\n  url={https://arxiv.org/abs/2603.04019}\n}",
  "sulc2026modalfinancial": "@inproceedings{sulc2026modalfinancial,\n  title={Modal Logical Neural Networks for Financial AI},\n  author={Sulc, Antonin},\n  booktitle={ICLR 2026 Workshop on Financial AI (FinAI)},\n  year={2026},\n  eprint={2603.12487},\n  archivePrefix={arXiv},\n  url={https://arxiv.org/abs/2603.12487}\n}",
