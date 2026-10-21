@@ -10,7 +10,7 @@
 <title>Antonin Sulc, Ph.D. | Neuro-Symbolic AI and Scientific Machine Learning</title>
 <meta name="description" content="Antonin Sulc, Senior Researcher at Innovatrics and LBNL affiliate: modal logical neural networks, one-shot PDE solvers and agentic AI for particle accelerators.">
 <meta name="author" content="Antonin Sulc">
-<meta name="keywords" content="Antonin Sulc, Antonín Šulc, Neuro-Symbolic AI, Modal Logical Neural Networks, MLNN, torchmodal, Differentiable Modal Logic, Belief Functions, Dempster-Shafer, Event2Vec, FastLSQ, Physics-Informed Neural Networks, Agentic AI, Particle Accelerators, Computer Vision, Innovatrics, Lawrence Berkeley National Laboratory">
+<meta name="keywords" content="Antonin Sulc, Antonín Šulc, Neuro-Symbolic AI, Modal Logical Neural Networks, MLNN, torchmodal, torchbelief, Differentiable Modal Logic, Belief Functions, Dempster-Shafer, Imprecise Probability, Evidential Deep Learning, Event2Vec, FastLSQ, Physics-Informed Neural Networks, Agentic AI, Particle Accelerators, Computer Vision, Innovatrics, Lawrence Berkeley National Laboratory">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <link rel="canonical" href="https://sulcantonin.github.io/">
@@ -66,6 +66,7 @@
         "Modal Logical Neural Networks",
         "Differentiable Modal Logic",
         "Belief Functions",
+        "Imprecise Probability",
         "Scientific Machine Learning",
         "Physics-Informed Neural Networks",
         "Agentic AI",
@@ -493,6 +494,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
   <div class="container container--narrow">
     <h2 id="highlights-h">Recent highlights</h2>
     <ul class="highlights">
+      <li>New open-source library <a href="https://github.com/sulcantonin/torchbelief" target="_blank" rel="noopener noreferrer">torchbelief</a> (<a href="https://pypi.org/project/torchbelief/" target="_blank" rel="noopener noreferrer">PyPI</a>): differentiable Dempster–Shafer belief functions, source-conflict blame and abstaining decision rules in PyTorch.</li>
       <li>New paper in Springer's <em>Belief Functions: Theory and Applications</em>: <a href="#pub-differentiable-belief-function-layers">Neural Networks with Differentiable Belief-Function Layers</a>, with code in <a href="https://github.com/sulcantonin/enn-public" target="_blank" rel="noopener noreferrer">enn-public</a>.</li>
       <li>Event2Vec is now published in <a href="https://proceedings.mlr.press/v282/sulc26a.html" target="_blank" rel="noopener noreferrer">Proceedings of Machine Learning Research, Vol. 282</a> (NeurIPS NeurReps workshops).</li>
       <li>Oral talk at <a href="https://2026.nesyconf.org/" target="_blank" rel="noopener noreferrer">NeSy 2026</a> in Lisbon on <a href="#pub-modal-logic-neural-networks">Modal Logic Neural Networks</a>.</li>
@@ -524,6 +526,14 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
         <p>Code for deep evidential networks with differentiable belief-function layers: every mass in the pipeline is a valid Dempster–Shafer mass function, combined with Yager's rule, so the mass on the ignorance set serves as an "I do not know" signal.</p>
         <div class="links">
           <a href="https://github.com/sulcantonin/enn-public" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="#pub-differentiable-belief-function-layers">Paper</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>torchbelief</h3>
+        <p>Differentiable belief functions and imprecise probabilities for PyTorch. It fuses sources that disagree (Dempster, Yager, TBM, Dubois–Prade, PCR, cautious rules), assigns blame to the faulty one, and decides or abstains when the evidence doesn't single out an answer. It includes evidential layers and losses that can sit inside a network.</p>
+        <div class="links">
+          <a href="https://pypi.org/project/torchbelief/" target="_blank" rel="noopener noreferrer">PyPI</a> <a href="https://github.com/sulcantonin/torchbelief" target="_blank" rel="noopener noreferrer">GitHub</a> <a href="https://github.com/sulcantonin/torchbelief/blob/main/docs/visual-guide.md" target="_blank" rel="noopener noreferrer">Visual guide</a> <a href="#pub-differentiable-belief-function-layers">Related paper</a>
         </div>
       </div>
 
@@ -956,7 +966,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{outline:2px soli
 
 <footer class="site-footer">
   <p>© 2026 Antonin Sulc</p>
-  <p>Last updated <time datetime="2026-10-18">18 October 2026</time></p>
+  <p>Last updated <time datetime="2026-10-21">21 October 2026</time></p>
 </footer>
 
 <dialog id="viewer3d" class="viewer" aria-labelledby="viewer3d-title">
